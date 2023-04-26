@@ -523,9 +523,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4239931817748412617, guid: bd1eb83b270df04418888adc6efa5032, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4239931817748412629, guid: bd1eb83b270df04418888adc6efa5032, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd1eb83b270df04418888adc6efa5032, type: 3}
+--- !u!1 &7819864303875094197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4239931817748412629, guid: bd1eb83b270df04418888adc6efa5032, type: 3}
+  m_PrefabInstance: {fileID: 7819864303875094196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7819864303875094198 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4239931817203988760, guid: bd1eb83b270df04418888adc6efa5032, type: 3}
+  m_PrefabInstance: {fileID: 7819864303875094196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7819864303875094199 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4239931817957163022, guid: bd1eb83b270df04418888adc6efa5032, type: 3}
+  m_PrefabInstance: {fileID: 7819864303875094196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7819864303875094200 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4239931817170039148, guid: bd1eb83b270df04418888adc6efa5032, type: 3}
+  m_PrefabInstance: {fileID: 7819864303875094196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7819864303875094201 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4239931817243532523, guid: bd1eb83b270df04418888adc6efa5032, type: 3}
+  m_PrefabInstance: {fileID: 7819864303875094196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7819864303875094202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7819864303875094197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e49a44ea5a5729549a78d7324038cf64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  speed: 7
+  jumpForce: 12
+  slideSpeed: 1
+  wallJumpLerp: 5
+  dashSpeed: 40
+  canMove: 1
+  wallGrab: 0
+  wallJumped: 0
+  wallSlide: 0
+  wallSlideTimerBeforeFall: 3
+  resetWallSlideTimerBeforeFall: 10
+  isDashing: 0
+  groundTouch: 0
+  hasDashed: 0
+  side: 1
+  dashParticle: {fileID: 7819864303875094201}
+  jumpParticle: {fileID: 7819864303875094200}
+  wallJumpParticle: {fileID: 7819864303875094199}
+  slideParticle: {fileID: 7819864303875094198}
