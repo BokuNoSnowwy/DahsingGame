@@ -199,7 +199,7 @@ public class Movement : MonoBehaviour
         rb.velocity = Vector2.zero;
         Vector2 dir = new Vector2(x, y);
 
-        rb.velocity += dir.normalized * dashSpeed;
+        rb.velocity += dir * dashSpeed;
         StartCoroutine(DashWait());
     }
 

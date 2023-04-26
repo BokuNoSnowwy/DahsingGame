@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class PoolMovement : Movement
 {
+    private Vector2 minPower = Vector2.one * -2;
+    private Vector2 maxPower = Vector2.one * 2;
+
+    private Vector3 startPoint;
+    private Vector3 endPoint;
+
+    private Vector2 forceArrow;
+    private bool isPreparingDash;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +27,29 @@ public class PoolMovement : Movement
 
     public override void DashMovement()
     {
-        if (Input.GetButtonDown("Fire1") && !hasDashed)
+        if (Input.GetButtonDown("Fire1") && !isPreparingDash)
         {
-            if(xRaw != 0 || yRaw != 0)
-                Dash(xRaw, yRaw);
+            //TODO Faire apparaitre la fleche style billard
+            // Slow motion du jeu
+
+            startPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            isPreparingDash = true;
+
+            Time.timeScale = 0.2f;
+        }
+
+        if (Input.GetButtonUp("Fire1") && isPreparingDash)
+        {
+            endPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            
+            forceArrow = new Vector2(Mathf.Clamp(startPoint.x - endPoint.x, minPower.x, maxPower.x),
+                Mathf.Clamp(startPoint.y - endPoint.y, minPower.y, maxPower.y));
+            //rb.AddForce(forceArrow * dashSpeed, ForceMode2D.Impulse);
+            Debug.LogError(forceArrow.x + " " + forceArrow.y);
+            Dash(forceArrow.x,forceArrow.y);
+            
+            isPreparingDash = false;
+            Time.timeScale = 1;
         }
     }
 }
