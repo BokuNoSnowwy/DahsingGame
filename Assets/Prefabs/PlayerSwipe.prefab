@@ -5058,7 +5058,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 0
@@ -5135,7 +5135,8 @@ MonoBehaviour:
   jumpForce: 50
   slideSpeed: 5
   wallJumpLerp: 10
-  dashSpeed: 50
+  dashSpeed: 65
+  gravity: 0.5
   canMove: 0
   wallGrab: 0
   wallJumped: 0

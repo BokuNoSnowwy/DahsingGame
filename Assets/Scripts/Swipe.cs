@@ -18,6 +18,7 @@ public class Swipe : MonoBehaviour
     public float slideSpeed = 5;
     public float wallJumpLerp = 10;
     public float dashSpeed = 20;
+    public float gravity = 1f;
 
     [Space]
     [Header("Booleans")]
@@ -72,17 +73,15 @@ public class Swipe : MonoBehaviour
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             startTouchPosition = Input.GetTouch(0).position;
-            Debug.Log(startTouchPosition);
         }
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
         {
             endTouchPosition = Input.GetTouch(0).position;
-            Debug.Log(endTouchPosition);
-
-                Dash(3*(endTouchPosition.x - startTouchPosition.x), 3*(endTouchPosition.y - startTouchPosition.y));
+            if (!hasDashed)
+            {
+                Dash(3 * (endTouchPosition.x - startTouchPosition.x), 3 * (endTouchPosition.y - startTouchPosition.y));
+            }      
         }
-
-
 
         //////////////////////////////////////////////////////
 
@@ -228,7 +227,7 @@ public class Swipe : MonoBehaviour
         yield return new WaitForSeconds(.3f);
 
         dashParticle.Stop();
-        rb.gravityScale = 3;
+        rb.gravityScale = gravity;
         GetComponent<BetterJumping>().enabled = true;
         wallJumped = false;
         isDashing = false;
