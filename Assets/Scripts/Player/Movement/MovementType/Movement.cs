@@ -41,11 +41,16 @@ public class Movement : MonoBehaviour
     public ParticleSystem jumpParticle;
     public ParticleSystem wallJumpParticle;
     public ParticleSystem slideParticle;
-    
+
+    [Header("Axis")] 
+    protected float x;
+    protected float y;
+    protected float xRaw;
+    protected float yRaw;
     
 
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         coll = GetComponent<Collision>();
         rb = GetComponent<Rigidbody2D>();
@@ -53,12 +58,12 @@ public class Movement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        float xRaw = Input.GetAxisRaw("Horizontal");
-        float yRaw = Input.GetAxisRaw("Vertical");
+        x = Input.GetAxis("Horizontal");
+        y = Input.GetAxis("Vertical");
+        xRaw = Input.GetAxisRaw("Horizontal");
+        yRaw = Input.GetAxisRaw("Vertical");
         Vector2 dir = new Vector2(x, y);
 
         Walk(dir);
@@ -101,7 +106,9 @@ public class Movement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, y * (speed * speedModifier));
         }
 
-
+        DashMovement();
+        
+        
         if(coll.onWall && !coll.onGround)
         {
             if (x != 0 && !wallGrab)
@@ -125,12 +132,6 @@ public class Movement : MonoBehaviour
                 Jump(Vector2.up, false);
             if (coll.onWall && !coll.onGround)
                 WallJump();
-        }
-
-        if (Input.GetButtonDown("Fire1") && !hasDashed)
-        {
-            if(xRaw != 0 || yRaw != 0)
-                Dash(xRaw, yRaw);
         }
 
         if (coll.onGround && !groundTouch)
@@ -163,7 +164,16 @@ public class Movement : MonoBehaviour
 
     }
 
-    void GroundTouch()
+    public virtual void DashMovement()
+    {
+        if (Input.GetButtonDown("Fire1") && !hasDashed)
+        {
+            if(xRaw != 0 || yRaw != 0)
+                Dash(xRaw, yRaw);
+        }
+    }
+
+    protected void GroundTouch()
     {
         hasDashed = false;
         isDashing = false;
@@ -176,7 +186,7 @@ public class Movement : MonoBehaviour
         jumpParticle.Play();
     }
 
-    private void Dash(float x, float y)
+    protected void Dash(float x, float y)
     {
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
@@ -193,7 +203,7 @@ public class Movement : MonoBehaviour
         StartCoroutine(DashWait());
     }
 
-    IEnumerator DashWait()
+    protected IEnumerator DashWait()
     {
         FindObjectOfType<GhostTrail>().ShowGhost();
         StartCoroutine(GroundDash());
@@ -214,7 +224,7 @@ public class Movement : MonoBehaviour
         isDashing = false;
     }
 
-    IEnumerator GroundDash()
+    protected IEnumerator GroundDash()
     {
         yield return new WaitForSeconds(.15f);
         if (coll.onGround)
@@ -258,7 +268,7 @@ public class Movement : MonoBehaviour
         rb.velocity = new Vector2(push, -slideSpeed);
     }
 
-    private void Walk(Vector2 dir)
+    protected void Walk(Vector2 dir)
     {
         if (!canMove)
             return;
@@ -276,7 +286,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-    public void Jump(Vector2 dir, bool wall)
+    protected void Jump(Vector2 dir, bool wall)
     {
         slideParticle.transform.parent.localScale = new Vector3(ParticleSide(), 1, 1);
         ParticleSystem particle = wall ? wallJumpParticle : jumpParticle;
@@ -287,14 +297,14 @@ public class Movement : MonoBehaviour
         particle.Play();
     }
 
-    IEnumerator DisableMovement(float time)
+    protected IEnumerator DisableMovement(float time)
     {
         canMove = false;
         yield return new WaitForSeconds(time);
         canMove = true;
     }
 
-    void RigidbodyDrag(float x)
+    protected void RigidbodyDrag(float x)
     {
         rb.drag = x;
     }
