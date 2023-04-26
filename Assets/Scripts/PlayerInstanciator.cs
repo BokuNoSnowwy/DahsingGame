@@ -38,18 +38,19 @@ public class PlayerInstanciator : MonoBehaviour
 
     public void InstanciatePool()
     {
+        Time.timeScale = 1;
+        if (swipeObject)
+        {
+            swipeObject.SetActive(false);
+        }
+
+        if (touchObject)
+        {
+            touchObject.SetActive(false);
+        }
+        
         if (poolObject != null)
         {
-            if (swipeObject)
-            {
-                swipeObject.SetActive(false);
-            }
-
-            if (touchObject)
-            {
-                touchObject.SetActive(false);
-            }
-            
             poolObject.SetActive(true);
             poolObject.transform.position = spawnPosition.position;
         }
@@ -62,18 +63,19 @@ public class PlayerInstanciator : MonoBehaviour
     
     public void InstanciateTouch()
     {
+        Time.timeScale = 1;
+        if (swipeObject)
+        {
+            swipeObject.SetActive(false);
+        }
+
+        if (poolObject)
+        {
+            poolObject.SetActive(false);
+        }
+        
         if (touchObject != null)
         {
-            if (swipeObject)
-            {
-                swipeObject.SetActive(false);
-            }
-
-            if (poolObject)
-            {
-                poolObject.SetActive(false);
-            }
-            
             touchObject.SetActive(true);
             touchObject.transform.position = spawnPosition.position;
         }
@@ -86,18 +88,19 @@ public class PlayerInstanciator : MonoBehaviour
     
     public void InstanciateSwipe()
     {
+        Time.timeScale = 1;
+        if (touchObject)
+        {
+            touchObject.SetActive(false);
+        }
+
+        if (poolObject)
+        {
+            poolObject.SetActive(false);
+        }
+        
         if (swipeObject != null)
         {
-            if (touchObject)
-            {
-                touchObject.SetActive(false);
-            }
-
-            if (poolObject)
-            {
-                poolObject.SetActive(false);
-            }
-            
             swipeObject.SetActive(true);
             swipeObject.transform.position = spawnPosition.position;
         }

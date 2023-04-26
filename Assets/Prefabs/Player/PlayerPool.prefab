@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 6562053868118649463}
   - component: {fileID: 6562053868118649448}
   - component: {fileID: 6562053868118649449}
-  - component: {fileID: 6562053868118649462}
   - component: {fileID: 6562053868118649461}
   - component: {fileID: 6562053868118649460}
   - component: {fileID: 6562053868118649483}
@@ -111,38 +110,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.33}
   m_Size: {x: 0.86, y: 0.82}
   m_Direction: 0
---- !u!114 &6562053868118649462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6562053868118649450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3286969c5df8a1e4bb64bc92ea46495e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  speed: 7
-  jumpForce: 12
-  slideSpeed: 1
-  wallJumpLerp: 5
-  dashSpeed: 40
-  canMove: 1
-  wallGrab: 0
-  wallJumped: 0
-  wallSlide: 0
-  wallSlideTimerBeforeFall: 3
-  resetWallSlideTimerBeforeFall: 10
-  isDashing: 0
-  groundTouch: 0
-  hasDashed: 0
-  side: 1
-  dashParticle: {fileID: 6562053868624596564}
-  jumpParticle: {fileID: 6562053868564145107}
-  wallJumpParticle: {fileID: 6562053868346348209}
-  slideParticle: {fileID: 6562053868663106471}
 --- !u!114 &6562053868118649461
 MonoBehaviour:
   m_ObjectHideFlags: 0

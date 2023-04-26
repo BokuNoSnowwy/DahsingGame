@@ -841,9 +841,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c677c5a79d222a145b821e8a9db18abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolPrefab: {fileID: 0}
-  swipePrefab: {fileID: 0}
-  touchPrefab: {fileID: 0}
+  poolPrefab: {fileID: 6562053868118649450, guid: 95731bcc20d8d574f93d297a8775208d, type: 3}
+  swipePrefab: {fileID: 6220314003077627839, guid: fc700b5b616a99d48ac40a3ce0b94560, type: 3}
+  touchPrefab: {fileID: 5095277136648053427, guid: 6be7261baee1f8f449622e364f5dc308, type: 3}
   poolButton: {fileID: 970762387}
   touchButton: {fileID: 2074571084}
   swipeButton: {fileID: 2113658985}
@@ -1578,6 +1578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6562053868118649450, guid: 95731bcc20d8d574f93d297a8775208d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6562053868118649463, guid: 95731bcc20d8d574f93d297a8775208d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1622,5 +1626,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 95731bcc20d8d574f93d297a8775208d, type: 3}
