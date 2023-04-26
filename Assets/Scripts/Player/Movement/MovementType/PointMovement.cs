@@ -18,6 +18,7 @@ public class PointMovement : Movement
 
     public override void DashMovement()
     {
+
         if(Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -26,8 +27,12 @@ public class PointMovement : Movement
             touchPos = Camera.main.ScreenToWorldPoint(touchPos);
             touchPos = new Vector3(touchPos.x, touchPos.y, 0);
 
-            Vector3 heading = (transform.position - touchPos).normalized;
-            Vector3 direction = heading / heading.magnitude;
+            Vector3 heading = transform.position - touchPos;
+            float distance = heading.magnitude;
+            Vector3 direction = heading / distance;
+
+            dashSpeed = 40f * Mathf.Sqrt(distance);
+            Debug.Log(dashSpeed);
 
             float xRaw = -direction.x;
             float yRaw = -direction.y;
