@@ -5135,8 +5135,7 @@ MonoBehaviour:
   jumpForce: 50
   slideSpeed: 5
   wallJumpLerp: 10
-  dashSpeed: 65
-  gravity: 0.5
+  dashSpeed: 0.1
   canMove: 0
   wallGrab: 0
   wallJumped: 0
