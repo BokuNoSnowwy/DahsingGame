@@ -13,13 +13,11 @@ public class Swipe : Movement
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             startTouchPosition = Input.GetTouch(0).position;
-            Debug.Log(startTouchPosition);
         }
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
         {
             endTouchPosition = Input.GetTouch(0).position;
-            Debug.Log(endTouchPosition);
-            Dash( endTouchPosition.x - startTouchPosition.x, endTouchPosition.y - startTouchPosition.y);
+            Dash(endTouchPosition.x - startTouchPosition.x, endTouchPosition.y - startTouchPosition.y);
         }
     }
 }
