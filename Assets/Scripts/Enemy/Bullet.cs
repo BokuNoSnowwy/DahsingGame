@@ -2,15 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : Enemy
+public class Bullet : Enemy, IObjectPoolNotifier
 {
     [SerializeField] float deathDelay;
     [SerializeField] float moveSpeed;
-
-    void Start()
-    {
-        Invoke("Die", deathDelay);
-    }
 
     void Update()
     {
@@ -29,6 +24,16 @@ public class Bullet : Enemy
 
     protected override void Die()
     {
-        Destroy(gameObject);
+        gameObject.ReturnToPool();
+    }
+
+    public void OnEnqueuedToPool()
+    {
+        
+    }
+
+    public void OnCreateOrDequeuedFromPool(bool created)
+    {
+        Invoke("Die", deathDelay);
     }
 }
