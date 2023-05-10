@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public string LevelSelectorSceneName;
-    
+
     [Header("UnityEvents")] 
     [HideInInspector] public UnityEvent collectableEvent;
     [HideInInspector] public UnityEvent enemiesEvent;
@@ -19,10 +19,13 @@ public class GameManager : MonoBehaviour
 
     [Header("Levels")]
     [SerializeField] private int indexLevel;
-
     public List<Level> levelList = new List<Level>();
-
     private float timerLevel;
+
+    [Header("Game")]
+
+    [SerializeField] private GameObject playerPrefab;
+    private GameObject playerInstance;
 
     [Header("Other")] 
     [SerializeField] private bool isInGame;
@@ -83,6 +86,11 @@ public class GameManager : MonoBehaviour
 
     #region InGame
 
+    public void SpawnPlayer()
+    {
+        GameObject player = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+        playerInstance = player;
+    }
     public void RespawnPlayer()
     {
         playerRespawnEvent.Invoke();
@@ -108,6 +116,27 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    #region SceneLoading
+
+    IEnumerator LoadYourAsyncScene()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(GetActualLevel().sceneName.ToString());
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            Debug.LogError("SceneIsLoading");
+            yield return null;
+        }
+        
+        Debug.LogError("SceneIsLoaded");
+        
+        //TODO Spawn Player
+        SpawnPlayer();
+    }
+    
+    #endregion
+
     public Level GetActualLevel()
     {
         return levelList[indexLevel];
@@ -115,9 +144,11 @@ public class GameManager : MonoBehaviour
 
     public void LaunchLevel()
     {
+        //Update Listeners
         ResetLevelListeners();
-        SceneManager.LoadSceneAsync(GetActualLevel().sceneName.ToString());
         GetActualLevel().SetupObjectives();
+
+        StartCoroutine(LoadYourAsyncScene());
     }
 
     private void ResetLevelListeners()

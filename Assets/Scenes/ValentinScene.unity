@@ -1983,6 +1983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2cc388d3697f24395fd7d8ab41f286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelSelectorSceneName: ValentinScene
   collectableEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -2031,6 +2032,9 @@ MonoBehaviour:
       success: 0
       objectiveDone: 0
       isCollected: 0
+  playerPrefab: {fileID: 5095277136648053427, guid: 6be7261baee1f8f449622e364f5dc308, type: 3}
+  playerInstance: {fileID: 0}
+  isInGame: 0
   isPaused: 0
 --- !u!4 &1662597574
 Transform:
