@@ -151,6 +151,7 @@ MonoBehaviour:
   playerSwipe: {fileID: 0}
   entry: {fileID: 2332973903304343088}
   exit: {fileID: 8366433329592084213}
+  keepPlayer: 0
 --- !u!50 &8450988504562090649
 Rigidbody2D:
   serializedVersion: 4
@@ -159,7 +160,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5176062034383243281}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
