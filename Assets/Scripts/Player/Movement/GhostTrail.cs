@@ -11,10 +11,18 @@ public class GhostTrail : MonoBehaviour
     public Color fadeColor;
     public float ghostInterval;
     public float fadeTime;
+    public PlayerInstanciator playerInstanciator;
 
     private void Start()
     {
         anim = FindObjectOfType<AnimationScript>();
+        UpdatePlayer();
+        
+        playerInstanciator.changePlayerEnvent.AddListener(UpdatePlayer);
+    }
+
+    private void UpdatePlayer()
+    {
         move = FindObjectOfType<Movement>();
         sr = GetComponent<SpriteRenderer>();
     }

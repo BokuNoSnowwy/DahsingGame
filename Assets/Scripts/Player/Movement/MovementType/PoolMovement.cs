@@ -44,8 +44,7 @@ public class PoolMovement : Movement
             
             forceArrow = new Vector2(Mathf.Clamp(startPoint.x - endPoint.x, minPower.x, maxPower.x),
                 Mathf.Clamp(startPoint.y - endPoint.y, minPower.y, maxPower.y));
-            //rb.AddForce(forceArrow * dashSpeed, ForceMode2D.Impulse);
-            Debug.LogError(forceArrow.x + " " + forceArrow.y);
+            
             Dash(forceArrow.x,forceArrow.y);
             
             isPreparingDash = false;
