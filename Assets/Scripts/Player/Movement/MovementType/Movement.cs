@@ -341,6 +341,11 @@ public class Movement : MonoBehaviour
         if (collision.TryGetComponent(out IInteractable interactable))
         {
             interactable.DetectPlayer(this);
+            
+        }
+        else if (collision.transform.parent.TryGetComponent(out IInteractable interactableParent))
+        {
+            interactableParent.DetectPlayer(this);
         }
     }
 }

@@ -28,12 +28,4 @@ public class Interactive : MonoBehaviour, IInteractable
     public virtual void ResetInteractable()
     {
     }
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            DetectPlayer(collision.GetComponent<Movement>());
-        }
-    }
 }
