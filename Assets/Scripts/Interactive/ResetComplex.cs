@@ -13,7 +13,7 @@ public class ResetComplex : Interactive
         resetActif = L_reset[nReset];
     }
 
-    public override void DetectPlayer()
+    public override void DetectPlayer(Movement playerMovement)
     {
         resetActif.SetActive(false);
         if (nReset < L_reset.Length - 1)

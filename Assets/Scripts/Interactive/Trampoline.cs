@@ -5,7 +5,7 @@ public class Trampoline : Interactive
     [SerializeField]
     private float power = 50;
 
-    public override void DetectPlayer()
+    public override void DetectPlayer(Movement playerMovement)
     {
         if (playerSwipe.rb.velocity.y < 0)
         {

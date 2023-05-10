@@ -6,7 +6,7 @@ public class Teleport : Interactive
     private GameObject entry, exit;
     public bool keepPlayer;
 
-    public override void DetectPlayer()
+    public override void DetectPlayer(Movement playerMovement)
     {
         playerSwipe.hasDashed = false;
         playerSwipe.gameObject.transform.position = exit.transform.position;
