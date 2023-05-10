@@ -13,6 +13,14 @@ public class EnemyShooting : Enemy
 
     [SerializeField] ObjectPool pool;
 
+    Transform[] turretParts;
+
+    public override void Start()
+    {
+        base.Start();
+        turretParts = GetComponentsInChildren<Transform>();
+    }
+
     //Shoot bullet
     IEnumerator Shooting()
     {
@@ -29,6 +37,10 @@ public class EnemyShooting : Enemy
     protected override void Die()
     {
         isShooting = false;
+        foreach(Transform part in turretParts)
+        {
+            part.gameObject.SetActive(false);
+        }
         base.Die();
     }
 
@@ -38,5 +50,14 @@ public class EnemyShooting : Enemy
         base.StartEnemy();
         isShooting = true;
         StartCoroutine(Shooting());
+    }
+
+    public override void ResetInteractable()
+    {
+        base.ResetInteractable();
+        foreach (Transform part in turretParts)
+        {
+            part.gameObject.SetActive(true);
+        }
     }
 }

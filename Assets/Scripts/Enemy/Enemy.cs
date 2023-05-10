@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour, IInteractable
     public Vector2 iniPos { get; set; }
 
     //Get all component
-    void Start()
+    public virtual void Start()
     {
         iniPos = transform.position;
         col = GetComponent<Collider2D>();
@@ -62,7 +62,7 @@ public class Enemy : MonoBehaviour, IInteractable
     }
 
     //Lanch when scene restart
-    public void ResetInteractable()
+    public virtual void ResetInteractable()
     {
         transform.position = iniPos;
         col.enabled = true;
