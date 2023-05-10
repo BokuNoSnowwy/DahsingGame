@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using DG.Tweening;
 
@@ -28,6 +26,7 @@ public class Movement : MonoBehaviour
     public float wallSlideTimerBeforeFall;
     public float resetWallSlideTimerBeforeFall = 10f;
     public bool isDashing;
+    public bool noGravity;
 
     [Space]
     public bool groundTouch;
@@ -160,8 +159,6 @@ public class Movement : MonoBehaviour
             side = -1;
             anim.Flip(side);
         }
-
-
     }
 
     public virtual void DashMovement()
@@ -200,6 +197,8 @@ public class Movement : MonoBehaviour
         Vector2 dir = new Vector2(x, y);
 
         rb.velocity += dir * dashSpeed;
+        hasDashed = true;
+        noGravity = false;
         StartCoroutine(DashWait());
     }
 
@@ -218,7 +217,14 @@ public class Movement : MonoBehaviour
         yield return new WaitForSeconds(.3f);
 
         dashParticle.Stop();
-        rb.gravityScale = 3;
+        if (noGravity)
+        {
+            rb.gravityScale = 0;
+        }
+        else
+        {
+            rb.gravityScale = 3;
+        }
         GetComponent<BetterJumping>().enabled = true;
         wallJumped = false;
         isDashing = false;
