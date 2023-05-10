@@ -31,7 +31,6 @@ public class Interactive : MonoBehaviour, IInteractable
         if (collision.tag == "Player")
         {
             DetectPlayer();
-            Debug.Log("salut");
         }
     }
 }

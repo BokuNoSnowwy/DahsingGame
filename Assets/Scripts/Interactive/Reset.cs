@@ -1,4 +1,3 @@
-using UnityEngine;
 
 public class Reset : Interactive
 {
