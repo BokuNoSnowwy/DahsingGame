@@ -23,7 +23,6 @@ public class Swipe : Movement
             }
         }
 
-        Debug.Log(noGravity);
         if (noGravity)
         {
             rb.gravityScale = 0;

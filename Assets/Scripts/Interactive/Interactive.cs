@@ -10,6 +10,10 @@ public class Interactive : MonoBehaviour, IInteractable
         {
         return transform.position;
         }
+        set
+        {
+            ;
+        }
     }
 
     public virtual void DetectPlayer()
