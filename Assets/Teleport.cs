@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Teleport : MonoBehaviour
+public class Teleport : Interactive
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private GameObject entry, exit;
 
-    // Update is called once per frame
-    void Update()
+    public override void DetectPlayer()
     {
-        
+        playerSwipe.hasDashed = false;
+        playerSwipe.gameObject.transform.position = exit.transform.position;
     }
 }
