@@ -6,9 +6,19 @@ public class Enemy : MonoBehaviour, IInteractable
 {
     public int life;
 
-    public void Die()
-    {
+    Collider col;
+    Renderer rend;
 
+    public void Start()
+    {
+        col = GetComponent<Collider>();
+        rend = GetComponent<Renderer>();
+    }
+
+    protected virtual void Die()
+    {
+        col.enabled = false;
+        rend.enabled = false;
     }
 
     public void DetectPlayer()
@@ -21,6 +31,9 @@ public class Enemy : MonoBehaviour, IInteractable
         {
             Die();
         }
+
+        //if player not dashing
+        //TO DO kill player
     }
 
     public void ListenEventGameManager()
@@ -28,8 +41,9 @@ public class Enemy : MonoBehaviour, IInteractable
         throw new System.NotImplementedException();
     }
 
-    public void Reset()
+    public void ResetInteractable()
     {
-        throw new System.NotImplementedException();
+        col.enabled = true;
+        rend.enabled = true;
     }
 }
