@@ -9,18 +9,30 @@ public class Enemy : MonoBehaviour, IInteractable
     Collider col;
     Renderer rend;
 
-    public void Start()
+    public Vector2 iniPos { get { return transform.position; } }
+
+    //Get all component
+    void Start()
     {
+        transform.position = iniPos;
         col = GetComponent<Collider>();
         rend = GetComponent<Renderer>();
     }
 
+    //Kill enemy
     protected virtual void Die()
     {
         col.enabled = false;
         rend.enabled = false;
     }
 
+    //Initialize enemy
+    protected virtual void StartEnemy()
+    {
+
+    }
+
+    //Launch when player collide
     public void DetectPlayer()
     {
         //TO DO check if player is dashing
@@ -36,13 +48,16 @@ public class Enemy : MonoBehaviour, IInteractable
         //TO DO kill player
     }
 
+    //Receive first player input and start scene
     public void ListenEventGameManager()
     {
-        throw new System.NotImplementedException();
+        StartEnemy();
     }
 
+    //Lanch when scene restart
     public void ResetInteractable()
     {
+        transform.position = iniPos;
         col.enabled = true;
         rend.enabled = true;
     }

@@ -11,15 +11,34 @@ public class EnemyMoving : Enemy
 
     [SerializeField] float moveSpeed;
 
-    void Moving()
+    //Move enemy between pos1 and pos2
+    IEnumerator Moving()
     {
-
+        Vector2 target = pos1;
+        while (isMoving)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, iniPos + target, moveSpeed * Time.deltaTime);
+            if(Vector2.Distance(transform.position, target) <= 0)
+            {
+                target = target == pos1 ? pos2 : pos1;
+                yield return new WaitForSeconds(.5f); //wait for .5s when reach a pos
+            }
+            yield return null;
+        }
     }
 
+    //Kill enemy
     protected override void Die()
     {
         isMoving = false;
-        transform.position = pos1;
         base.Die();
+    }
+
+    //Initialize enemy
+    protected override void StartEnemy()
+    {
+        base.StartEnemy();
+        isMoving = true;
+        StartCoroutine(Moving());
     }
 }
