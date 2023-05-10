@@ -25,6 +25,7 @@ public class Bullet : Enemy, IObjectPoolNotifier
     protected override void Die()
     {
         gameObject.ReturnToPool();
+        CancelInvoke();
     }
 
     public void OnEnqueuedToPool()
