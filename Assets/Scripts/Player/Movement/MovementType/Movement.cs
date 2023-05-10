@@ -16,6 +16,7 @@ public class Movement : MonoBehaviour
     public float slideSpeed = 5;
     public float wallJumpLerp = 10;
     public float dashSpeed = 20;
+    public float gravity = 2;
 
     [Space]
     [Header("Booleans")]
@@ -223,7 +224,7 @@ public class Movement : MonoBehaviour
         }
         else
         {
-            rb.gravityScale = 3;
+            rb.gravityScale = gravity;
         }
         GetComponent<BetterJumping>().enabled = true;
         wallJumped = false;
