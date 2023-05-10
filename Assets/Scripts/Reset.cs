@@ -1,14 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Reset : MonoBehaviour
+public class Reset : Interactive
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public override void DetectPlayer()
     {
-        if (collision.tag == "Player")
-        {
-            collision.gameObject.GetComponent<Swipe>().hasDashed = false;
-        }
+        playerSwipe.hasDashed = false;
     }
 }
