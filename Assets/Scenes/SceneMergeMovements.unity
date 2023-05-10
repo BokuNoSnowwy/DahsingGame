@@ -198,6 +198,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 366957611285556176, guid: 678f7695a8990ff429e340e39b5b97f8, type: 3}
+      propertyPath: playerInstanciator
+      value: 
+      objectReference: {fileID: 941275603}
     - target: {fileID: 366957611285556178, guid: 678f7695a8990ff429e340e39b5b97f8, type: 3}
       propertyPath: m_Name
       value: Ghost
@@ -848,6 +852,9 @@ MonoBehaviour:
   touchButton: {fileID: 2074571084}
   swipeButton: {fileID: 2113658985}
   spawnPosition: {fileID: 854068199}
+  changePlayerEnvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &941275604
 Transform:
   m_ObjectHideFlags: 0

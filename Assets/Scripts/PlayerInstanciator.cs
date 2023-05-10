@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class PlayerInstanciator : MonoBehaviour
@@ -21,6 +22,9 @@ public class PlayerInstanciator : MonoBehaviour
 
     [Header("Transform")]
     public Transform spawnPosition;
+
+    [Header("Ghost Update")]
+    public UnityEvent changePlayerEnvent;
     
     // Start is called before the first frame update
     void Start()
@@ -59,6 +63,8 @@ public class PlayerInstanciator : MonoBehaviour
             poolObject = Instantiate(poolPrefab, transform.position, Quaternion.identity);
             poolObject.transform.position = spawnPosition.position;
         }
+        
+        changePlayerEnvent.Invoke();
     }
     
     public void InstanciateTouch()
@@ -84,6 +90,8 @@ public class PlayerInstanciator : MonoBehaviour
             touchObject = Instantiate(touchPrefab, transform.position, Quaternion.identity);
             touchObject.transform.position = spawnPosition.position;
         }
+        
+        changePlayerEnvent.Invoke();
     }
     
     public void InstanciateSwipe()
@@ -109,5 +117,7 @@ public class PlayerInstanciator : MonoBehaviour
             swipeObject = Instantiate(swipePrefab, transform.position, Quaternion.identity);
             swipeObject.transform.position = spawnPosition.position;
         }
+        
+        changePlayerEnvent.Invoke();
     }
 }
