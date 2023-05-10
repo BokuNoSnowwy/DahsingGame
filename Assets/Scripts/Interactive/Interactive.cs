@@ -16,7 +16,7 @@ public class Interactive : MonoBehaviour, IInteractable
         }
     }
 
-    public virtual void DetectPlayer()
+    public virtual void DetectPlayer(Movement playerMovement)
     {
     }
 
@@ -33,7 +33,7 @@ public class Interactive : MonoBehaviour, IInteractable
     {
         if (collision.tag == "Player")
         {
-            DetectPlayer();
+            DetectPlayer(collision.GetComponent<Movement>());
         }
     }
 }

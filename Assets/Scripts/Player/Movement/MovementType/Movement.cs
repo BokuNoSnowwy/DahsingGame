@@ -335,4 +335,12 @@ public class Movement : MonoBehaviour
         int particleSide = coll.onRightWall ? 1 : -1;
         return particleSide;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent(out IInteractable interactable))
+        {
+            interactable.DetectPlayer(this);
+        }
+    }
 }

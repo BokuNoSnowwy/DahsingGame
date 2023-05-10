@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour, IInteractable
     [Range(1, 4)]
     public int life = 1;
 
-    Collider col;
+    Collider2D col;
     Renderer rend;
 
     public Vector2 iniPos { get; set; }
@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour, IInteractable
     void Start()
     {
         iniPos = transform.position;
-        col = GetComponent<Collider>();
+        col = GetComponent<Collider2D>();
         rend = GetComponent<Renderer>();
 
         //TEST
@@ -37,25 +37,28 @@ public class Enemy : MonoBehaviour, IInteractable
     }
 
     //Launch when player collide
-    public void DetectPlayer()
+    public void DetectPlayer(Movement playerMovement)
     {
-        //TO DO check if player is dashing
-        //if player dashing
-
-        life--;
-        if(life <= 0)
+        if (playerMovement.isDashing)
         {
-            Die();
+            life--;
+            if (life <= 0)
+            {
+                Die();
+            }
+            playerMovement.isDashing = false;
         }
-
-        //if player not dashing
-        //TO DO kill player
+        else
+        {
+            //RESTART SCENE
+            Destroy(playerMovement.gameObject);
+        }
     }
 
     //Receive first player input and start scene
     public void ListenEventGameManager()
     {
-        StartEnemy();
+        
     }
 
     //Lanch when scene restart
