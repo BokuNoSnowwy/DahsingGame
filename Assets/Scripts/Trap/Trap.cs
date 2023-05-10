@@ -7,7 +7,7 @@ public class Trap : MonoBehaviour, IInteractable
 
     public Vector2 iniPos { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
-    public void DetectPlayer()
+    public void DetectPlayer(Movement playerMovement)
     {
         throw new System.NotImplementedException();
         //Destroy(other.gameObject);
