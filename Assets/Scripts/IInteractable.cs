@@ -2,7 +2,7 @@ using UnityEngine;
 
 public interface IInteractable
 {
-    Vector2 iniPos { get;}
+    Vector2 iniPos { get; set; }
     //Launch when detect player collision
     void DetectPlayer();
     //Launch on level reset
