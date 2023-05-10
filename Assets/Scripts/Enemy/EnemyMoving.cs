@@ -18,10 +18,10 @@ public class EnemyMoving : Enemy
         while (isMoving)
         {
             transform.position = Vector2.MoveTowards(transform.position, iniPos + target, moveSpeed * Time.deltaTime);
-            if(Vector2.Distance(transform.position, target) <= 0)
+            if(Vector2.Distance(transform.position, iniPos + target) <= 0)
             {
                 target = target == pos1 ? pos2 : pos1;
-                yield return new WaitForSeconds(.5f); //wait for .5s when reach a pos
+                yield return new WaitForSeconds(.1f); //wait for .1s when reach a pos
             }
             yield return null;
         }

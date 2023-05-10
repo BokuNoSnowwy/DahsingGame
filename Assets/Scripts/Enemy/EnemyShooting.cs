@@ -7,7 +7,7 @@ public class EnemyShooting : Enemy
     [SerializeField] GameObject bulletPrefab;
 
     [SerializeField] float shootRate;
-    [SerializeField] Vector2 shootPoint;
+    [SerializeField] Transform shootPoint;
 
     bool isShooting;
 
@@ -16,8 +16,8 @@ public class EnemyShooting : Enemy
     {
         while (isShooting)
         {
-            GameObject bullet = Instantiate(bulletPrefab, shootPoint, Quaternion.identity);
-            yield return new WaitForSeconds(shootRate / 1);
+            GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, transform.rotation);
+            yield return new WaitForSeconds(1 / shootRate);
         }
     }
 

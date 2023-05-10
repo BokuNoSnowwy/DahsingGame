@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour, IInteractable
 {
-    public int life;
+    [Range(1, 4)]
+    public int life = 1;
 
     Collider col;
     Renderer rend;
 
-    public Vector2 iniPos { get { return transform.position; } }
+    public Vector2 iniPos { get; set; }
 
     //Get all component
     void Start()
     {
-        transform.position = iniPos;
+        iniPos = transform.position;
         col = GetComponent<Collider>();
         rend = GetComponent<Renderer>();
+
+        //TEST
+        StartEnemy();
     }
 
     //Kill enemy
@@ -29,7 +33,7 @@ public class Enemy : MonoBehaviour, IInteractable
     //Initialize enemy
     protected virtual void StartEnemy()
     {
-
+        transform.position = iniPos;
     }
 
     //Launch when player collide
