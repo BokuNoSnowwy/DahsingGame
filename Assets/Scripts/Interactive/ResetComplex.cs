@@ -24,4 +24,14 @@ public class ResetComplex : Interactive
         }
         playerSwipe.hasDashed = false;
     }
+
+    public override void ResetInteractable()
+    {
+        nReset = 0;
+        foreach (GameObject reset in L_reset)
+        {
+            reset.SetActive(false);
+        }
+        L_reset[0].SetActive(true);
+    }
 }

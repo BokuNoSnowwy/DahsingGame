@@ -21,9 +21,8 @@ public class Interactive : MonoBehaviour, IInteractable
         throw new System.NotImplementedException();
     }
 
-    public void ResetInteractable()
+    public virtual void ResetInteractable()
     {
-        throw new System.NotImplementedException();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
