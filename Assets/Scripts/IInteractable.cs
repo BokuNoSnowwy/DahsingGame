@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public interface IInteractable
 {
+    Vector2 iniPos { get; set; }
     //Launch when detect player collision
     void DetectPlayer();
     //Launch on level reset
