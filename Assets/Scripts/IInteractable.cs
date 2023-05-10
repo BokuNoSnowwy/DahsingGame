@@ -7,7 +7,7 @@ public interface IInteractable
     //Launch when detect player collision
     void DetectPlayer();
     //Launch on level reset
-    void Reset();
+    void ResetInteractable();
     //Listen to various GameManager event
     void ListenEventGameManager();
 }
