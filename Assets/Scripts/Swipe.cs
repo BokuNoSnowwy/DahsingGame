@@ -5,6 +5,9 @@ public class Swipe : Movement
     //Swipe
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
+    [SerializeField]
+    private float forceDash = 500f;
+    private Vector2 direction;
 
     new void Update()
     {
@@ -19,7 +22,11 @@ public class Swipe : Movement
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
             {
                 endTouchPosition = Input.GetTouch(0).position;
-                Dash(endTouchPosition.x - startTouchPosition.x, endTouchPosition.y - startTouchPosition.y);
+
+                direction = forceDash * (endTouchPosition - startTouchPosition).normalized;
+                
+                Dash(direction.x, direction.y);
+
                 AudioManager.instance.Play("Dash");
             }
         }
