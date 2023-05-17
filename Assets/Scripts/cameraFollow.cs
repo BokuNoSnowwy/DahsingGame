@@ -4,6 +4,8 @@ public class cameraFollow : MonoBehaviour
 {
     [SerializeField]
     private GameObject player;
+    private Swipe playerMove;
+    private Vector2 respawnPos;
 
     private Vector3 newPos;
     private RectTransform rect;
@@ -14,18 +16,24 @@ public class cameraFollow : MonoBehaviour
         rect = gameObject.GetComponent<RectTransform>();
         cam = gameObject.GetComponent<Camera>();
         newPos = rect.position;
+        playerMove = player.GetComponent<Swipe>();
     }
 
     void Update()
     {
-        if (player.transform.position.y >= rect.position.y)
+        if (player.transform.position.y >= rect.position.y + cam.orthographicSize/2)
         {
-            newPos.y = player.transform.position.y;
+            newPos.y = player.transform.position.y - cam.orthographicSize / 2;
             rect.position = newPos;
         }
         if (player.transform.position.y <= rect.position.y - cam.orthographicSize)
         {
-            Debug.Log("T mort");
+            respawnPos = player.transform.position;
+            playerMove.rb.velocity = Vector2.zero;
+            playerMove.noGravity = true;
+            respawnPos.y = rect.position.y - cam.orthographicSize + 1;
+            player.transform.position = respawnPos;
+            playerMove.hasDashed = false;
         }
     }
 }
