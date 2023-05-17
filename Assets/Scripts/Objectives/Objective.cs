@@ -10,6 +10,7 @@ public class Objective
     [SerializeField] protected bool isEnabled;
     [SerializeField] protected bool success;
     [SerializeField] protected bool objectiveDone;
+    [SerializeField] protected string objectiveString;
 
     protected GameManager gameManager;
 
@@ -45,6 +46,6 @@ public class Objective
 
     public bool Success { get => success; set => success = value; }
     public bool ObjectiveDone { get => objectiveDone; set => objectiveDone = value; }
-
     public bool IsEnabled { get => isEnabled; set => isEnabled = value; }
+    public string ObjectiveString { get => objectiveString; set => objectiveString = value; }
 }

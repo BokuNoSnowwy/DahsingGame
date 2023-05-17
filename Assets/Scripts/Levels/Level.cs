@@ -34,7 +34,7 @@ public class Level
         }
     }
 
-    private List<Objective> GetObjectives()
+    public  List<Objective> GetObjectives()
     {
         List<Objective> objectivesToReturn = new List<Objective>();
         
