@@ -6,7 +6,11 @@ using UnityEngine;
 [Serializable]
 public class ObjectiveCollectable : Objective
 {
-    [SerializeField] public bool isCollected;
+    public bool isCollected;
+    [SerializeField] private Sprite baseSprite;
+    [SerializeField] private Sprite obtainedSprite;
+
+    private SpriteRenderer spriteRenderer;
 
     public override void Initialization()
     {
@@ -14,6 +18,9 @@ public class ObjectiveCollectable : Objective
         gameManager.AddListenerCollectableEvent(EventInvoke);
         gameManager.AddListenerPlayerRespawn(ResetObjective);
         gameManager.AddListenerLevelFinishedEvent(ConfirmObjective);
+        
+        // Collectable Setup
+        
     }
 
     protected override void EventInvoke()

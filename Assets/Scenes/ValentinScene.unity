@@ -2017,6 +2017,8 @@ MonoBehaviour:
       success: 0
       objectiveDone: 0
       isCollected: 0
+      baseSprite: {fileID: 0}
+      obtainedSprite: {fileID: 0}
   - objectivesAreViables: 0
     sceneName: 1
     nbDeath: 0
@@ -2032,8 +2034,9 @@ MonoBehaviour:
       success: 0
       objectiveDone: 0
       isCollected: 0
-  playerPrefab: {fileID: 5095277136648053427, guid: 6be7261baee1f8f449622e364f5dc308, type: 3}
-  playerInstance: {fileID: 0}
+      baseSprite: {fileID: 0}
+      obtainedSprite: {fileID: 0}
+  playerPrefab: {fileID: 6220314003077627839, guid: fc700b5b616a99d48ac40a3ce0b94560, type: 3}
   isInGame: 0
   isPaused: 0
 --- !u!4 &1662597574

@@ -5017,6 +5017,7 @@ GameObject:
   - component: {fileID: 6220314003077627808}
   - component: {fileID: 6220314003077627809}
   - component: {fileID: 6220314003077627814}
+  - component: {fileID: 7799321312800844416}
   m_Layer: 0
   m_Name: PlayerSwipe
   m_TagString: Player
@@ -5150,6 +5151,23 @@ MonoBehaviour:
   jumpParticle: {fileID: 6562053868564145107, guid: 95731bcc20d8d574f93d297a8775208d, type: 3}
   wallJumpParticle: {fileID: 6562053868346348209, guid: 95731bcc20d8d574f93d297a8775208d, type: 3}
   slideParticle: {fileID: 6562053868663106471, guid: 95731bcc20d8d574f93d297a8775208d, type: 3}
+  dashEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7799321312800844416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6220314003077627839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f91f931c84a65194a99d43d2636f7832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAlive: 0
+  movementScript: {fileID: 6220314003077627814}
 --- !u!1 &6220314003604815439
 GameObject:
   m_ObjectHideFlags: 0

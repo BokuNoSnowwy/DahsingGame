@@ -23,9 +23,9 @@ public class GameManager : MonoBehaviour
     private float timerLevel;
 
     [Header("Game")]
-
     [SerializeField] private GameObject playerPrefab;
     private GameObject playerInstance;
+    private Transform playerSpawner;
 
     [Header("Other")] 
     [SerializeField] private bool isInGame;
@@ -88,12 +88,32 @@ public class GameManager : MonoBehaviour
 
     public void SpawnPlayer()
     {
-        GameObject player = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+        // Get Spawner position
+        playerSpawner = GameObject.FindGameObjectWithTag("Spawner").transform;
+        
+        GameObject player = Instantiate(playerPrefab,playerSpawner.position, Quaternion.identity);
         playerInstance = player;
+        
+        Player playerP = playerInstance.GetComponent<Player>();
+        playerP.Initialization();
+        playerP.AddListenerFirstDashRespawn(PlayerMadeFirstMove);
+        playerP.AddListenerPlayerDie(RespawnPlayer);
     }
+    
     public void RespawnPlayer()
     {
+        Debug.LogError("Respawn Player");
         playerRespawnEvent.Invoke();
+
+        isInGame = false;
+        timerLevel = 0;
+        
+        // Move Player 
+        if (playerSpawner != null)
+        {
+            playerInstance.gameObject.SetActive(true);
+            playerInstance.gameObject.transform.position = playerSpawner.position;
+        }
     }
 
     public void EndLevel()
@@ -111,7 +131,11 @@ public class GameManager : MonoBehaviour
 
     public void PlayerMadeFirstMove()
     {
-        isInGame = true;
+        if (!isInGame)
+        {
+            Debug.Log("PlayerMadeFirstmove");
+            isInGame = true;
+        }
     }
 
     #endregion
@@ -125,11 +149,11 @@ public class GameManager : MonoBehaviour
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)
         {
-            Debug.LogError("SceneIsLoading");
+            Debug.Log("SceneIsLoading");
             yield return null;
         }
         
-        Debug.LogError("SceneIsLoaded");
+        Debug.Log("SceneIsLoaded");
         
         //TODO Spawn Player
         SpawnPlayer();
