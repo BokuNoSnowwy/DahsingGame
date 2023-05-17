@@ -20,6 +20,7 @@ public class Swipe : Movement
             {
                 endTouchPosition = Input.GetTouch(0).position;
                 Dash(endTouchPosition.x - startTouchPosition.x, endTouchPosition.y - startTouchPosition.y);
+                AudioManager.instance.Play("Dash");
             }
         }
 
