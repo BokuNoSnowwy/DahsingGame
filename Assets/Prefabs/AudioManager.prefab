@@ -51,3 +51,33 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Ambient
+    clip: {fileID: 8300000, guid: 727116d2675de884bbc7accbf3655611, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Teleport
+    clip: {fileID: 8300000, guid: 0d19874af3804034faf44e3b185e13bf, type: 3}
+    volume: 0.35
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zap3
+    clip: {fileID: 8300000, guid: 56c1078de7a7a2443bcd7c1611173b71, type: 3}
+    volume: 0.35
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Zap
+    clip: {fileID: 8300000, guid: 08b74754cc343254fa2965d6df5ac588, type: 3}
+    volume: 0.35
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Trampoline
+    clip: {fileID: 8300000, guid: 887a9f80c34aba64d9dc0725a26b9177, type: 3}
+    volume: 0.35
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

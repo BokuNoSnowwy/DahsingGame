@@ -10,6 +10,7 @@ public class Teleport : Interactive
     {
         playerSwipe.hasDashed = false;
         playerSwipe.gameObject.transform.position = exit.transform.position;
+        AudioManager.instance.Play("Teleport");
         if (keepPlayer)
         {
             playerSwipe.rb.velocity = Vector2.zero;

@@ -23,6 +23,7 @@ public class ResetComplex : Interactive
             resetActif.SetActive(true);
         }
         playerSwipe.hasDashed = false;
+        AudioManager.instance.Play("Zap");
     }
 
     public override void ResetInteractable()

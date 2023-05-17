@@ -9,6 +9,7 @@ public class Trampoline : Interactive
     {
         if (playerSwipe.rb.velocity.y < 0)
         {
+            AudioManager.instance.Play("Trampoline");
             playerSwipe.hasDashed = false;
             playerSwipe.rb.AddForce(transform.up * power, ForceMode2D.Impulse);
         }  

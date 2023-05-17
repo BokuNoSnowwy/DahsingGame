@@ -18,7 +18,15 @@ public class GhostTrail : MonoBehaviour
         anim = FindObjectOfType<AnimationScript>();
         UpdatePlayer();
         
-        playerInstanciator.changePlayerEnvent.AddListener(UpdatePlayer);
+        if(playerInstanciator == null)
+        {
+            Debug.LogWarning("PlayerInstanciator is null");
+            return;
+        }
+        else
+        {
+            playerInstanciator.changePlayerEnvent.AddListener(UpdatePlayer);
+        }
     }
 
     private void UpdatePlayer()

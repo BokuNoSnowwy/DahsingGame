@@ -29,6 +29,8 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+
+        Play("Ambient");
     }
 
     public void Play(string name)
@@ -40,5 +42,16 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
+    }
+
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(A_Sounds, s => s.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound " + name + " doesn't exist");
+            return;
+        }
+        s.source.Stop();
     }
 }
