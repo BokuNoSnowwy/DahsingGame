@@ -5137,6 +5137,7 @@ MonoBehaviour:
   slideSpeed: 5
   wallJumpLerp: 10
   dashSpeed: 0.1
+  gravity: 0.5
   canMove: 0
   wallGrab: 0
   wallJumped: 0
@@ -5144,6 +5145,7 @@ MonoBehaviour:
   wallSlideTimerBeforeFall: 0
   resetWallSlideTimerBeforeFall: 10
   isDashing: 0
+  noGravity: 0
   groundTouch: 0
   hasDashed: 0
   side: 1
@@ -5168,6 +5170,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAlive: 0
   movementScript: {fileID: 6220314003077627814}
+  firstDashRespawn:
+    m_PersistentCalls:
+      m_Calls: []
+  playerDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6220314003604815439
 GameObject:
   m_ObjectHideFlags: 0
