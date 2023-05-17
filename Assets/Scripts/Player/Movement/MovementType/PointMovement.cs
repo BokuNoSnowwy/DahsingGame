@@ -32,7 +32,6 @@ public class PointMovement : Movement
             Vector3 direction = heading / distance;
 
             dashSpeed = 40f * Mathf.Sqrt(distance);
-            Debug.Log(dashSpeed);
 
             float xRaw = -direction.x;
             float yRaw = -direction.y;
