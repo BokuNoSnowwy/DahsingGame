@@ -182,6 +182,9 @@ MonoBehaviour:
   jumpParticle: {fileID: 6562053868564145107}
   wallJumpParticle: {fileID: 6562053868346348209}
   slideParticle: {fileID: 6562053868663106471}
+  dashEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6562053868127749748
 GameObject:
   m_ObjectHideFlags: 0

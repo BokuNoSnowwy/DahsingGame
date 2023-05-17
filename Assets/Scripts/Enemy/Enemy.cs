@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour, IInteractable
             {
                 Die();
             }
-            playerMovement.isDashing = false;
+            playerMovement.hasDashed = false;
         }
         else
         {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class Movement : MonoBehaviour
 {
@@ -41,12 +42,17 @@ public class Movement : MonoBehaviour
     public ParticleSystem jumpParticle;
     public ParticleSystem wallJumpParticle;
     public ParticleSystem slideParticle;
+    
+    [Header("Unity Listener")]
+    public UnityEvent dashEvent;
 
     [Header("Axis")] 
     protected float x;
     protected float y;
     protected float xRaw;
     protected float yRaw;
+
+
     
 
     // Start is called before the first frame update
@@ -168,6 +174,8 @@ public class Movement : MonoBehaviour
         {
             if(xRaw != 0 || yRaw != 0)
                 Dash(xRaw, yRaw);
+            
+            dashEvent.Invoke();
         }
     }
 
