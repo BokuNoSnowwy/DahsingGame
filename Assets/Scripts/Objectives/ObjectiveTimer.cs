@@ -7,6 +7,7 @@ using UnityEngine;
 public class ObjectiveTimer : Objective
 {
     public float timerLevel;
+    public float timerPlayerScore;
 
     public override void Initialization()
     {
@@ -22,6 +23,8 @@ public class ObjectiveTimer : Objective
             success = true;
             objectiveDone = true;
         }
+        
+        timerPlayerScore = (timerPlayerScore < gameManager.TimerLevel && timerPlayerScore != 0) ? timerPlayerScore : gameManager.TimerLevel;
     }
     
 }

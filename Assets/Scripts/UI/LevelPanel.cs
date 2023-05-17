@@ -15,10 +15,13 @@ public class LevelPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textObjective1;
     [SerializeField] private TextMeshProUGUI textObjective2;
     [SerializeField] private TextMeshProUGUI textObjective3;
+
+    [SerializeField] private Button launchLevelButton;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        launchLevelButton.onClick.AddListener(GameManager.Instance.LaunchLevel);    
     }
 
     // Update is called once per frame

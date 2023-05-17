@@ -10,6 +10,7 @@ public class EnemyShooting : Enemy
     [SerializeField] Transform shootPoint;
 
     bool isShooting;
+    bool hasStartedShooting;
 
     [SerializeField] ObjectPool pool;
 
@@ -19,11 +20,19 @@ public class EnemyShooting : Enemy
     {
         base.Start();
         turretParts = GetComponentsInChildren<Transform>();
+        GameManager.Instance.AddListenerSceneIsLoaded(PlayerStartEnemy);
     }
+
+    private void PlayerStartEnemy()
+    {
+        GameManager.Instance.Player.AddListenerFirstDashRespawn(StartEnemy);
+    }
+
 
     //Shoot bullet
     IEnumerator Shooting()
     {
+        Debug.LogError("Shooting");
         while (isShooting)
         {
             GameObject bullet = pool.GetObject()/*Instantiate(bulletPrefab, shootPoint.position, transform.rotation)*/;
@@ -48,8 +57,14 @@ public class EnemyShooting : Enemy
     protected override void StartEnemy()
     {
         base.StartEnemy();
-        isShooting = true;
-        StartCoroutine(Shooting());
+        if (!hasStartedShooting)
+        {
+            isShooting = true;
+            StartCoroutine(Shooting());
+        }
+
+        hasStartedShooting = true;
+
     }
 
     public override void ResetInteractable()
@@ -59,5 +74,8 @@ public class EnemyShooting : Enemy
         {
             part.gameObject.SetActive(true);
         }
+
+        isShooting = false;
+        hasStartedShooting = false;
     }
 }

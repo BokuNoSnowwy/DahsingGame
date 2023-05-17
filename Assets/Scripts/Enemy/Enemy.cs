@@ -20,7 +20,9 @@ public class Enemy : MonoBehaviour, IInteractable
         rend = GetComponent<Renderer>();
 
         //TEST
-        StartEnemy();
+        //StartEnemy();
+        
+        GameManager.Instance.AddListenerPlayerRespawn(ResetInteractable);
     }
 
     //Kill enemy
@@ -28,6 +30,7 @@ public class Enemy : MonoBehaviour, IInteractable
     {
         col.enabled = false;
         rend.enabled = false;
+        GameManager.Instance.enemiesEvent.Invoke();
     }
 
     //Initialize enemy
@@ -51,7 +54,7 @@ public class Enemy : MonoBehaviour, IInteractable
         else
         {
             //RESTART SCENE
-            Destroy(playerMovement.gameObject);
+            playerMovement.GetComponent<Player>().playerDie.Invoke();
         }
     }
 

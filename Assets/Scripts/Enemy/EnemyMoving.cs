@@ -8,9 +8,22 @@ public class EnemyMoving : Enemy
     [SerializeField] Vector2 pos2;
 
     bool isMoving;
+    bool hasStartedMoving;
 
     [SerializeField] float moveSpeed;
 
+    
+    public override void Start()
+    {
+        base.Start();
+        GameManager.Instance.AddListenerSceneIsLoaded(PlayerStartEnemy);
+    }
+
+    private void PlayerStartEnemy()
+    {
+        GameManager.Instance.Player.AddListenerFirstDashRespawn(StartEnemy);
+    }
+    
     //Move enemy between pos1 and pos2
     IEnumerator Moving()
     {
@@ -38,7 +51,21 @@ public class EnemyMoving : Enemy
     protected override void StartEnemy()
     {
         base.StartEnemy();
-        isMoving = true;
-        StartCoroutine(Moving());
+
+        if (!hasStartedMoving)
+        {
+            isMoving = true;
+            StartCoroutine(Moving());
+        }
+        
+        hasStartedMoving = true;
+
+    }
+
+    public override void ResetInteractable()
+    {
+        base.ResetInteractable();
+        isMoving = false;
+        hasStartedMoving = false;
     }
 }

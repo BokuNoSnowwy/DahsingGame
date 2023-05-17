@@ -32,15 +32,6 @@ public class Player : MonoBehaviour
         isAlive = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-            Die();
-        }
-    }
-    
     [ContextMenu("Player Die")]
     private void Die()
     {
@@ -48,6 +39,7 @@ public class Player : MonoBehaviour
         //Disable the player before respawning to make sure the player won't do unnecessary moves  
         gameObject.SetActive(false);
         playerDie.Invoke();
+        
     }
 
     public void AddListenerFirstDashRespawn(UnityAction action)

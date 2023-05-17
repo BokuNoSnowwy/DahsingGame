@@ -44,6 +44,7 @@ public class Objective
 
 
     public bool Success { get => success; set => success = value; }
+    public bool ObjectiveDone { get => objectiveDone; set => objectiveDone = value; }
 
     public bool IsEnabled { get => isEnabled; set => isEnabled = value; }
 }

@@ -103,6 +103,8 @@ public class RippleEffect : MonoBehaviour
         material.SetTexture("_GradTex", gradTexture);
 
         UpdateShaderParameters();
+        
+        
     }
 
     void Update()

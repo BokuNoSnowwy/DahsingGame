@@ -14,12 +14,17 @@ public class ObjectiveEnemies : Objective
         base.Initialization();
         gameManager.AddListenerEnemiesEvent(EventInvoke);
         gameManager.AddListenerLevelFinishedEvent(ConfirmObjective);
+        enemiesCount = objectiveDone? enemiesCount : 0;
     }
     
     protected override void EventInvoke()
     {
         base.EventInvoke();
-        enemiesCount++;
+        if (!success)
+        {
+            enemiesCount++;
+        }
+
         if (enemiesCount >= enemiesCountGoal)
         {
             success = true;    

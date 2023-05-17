@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,14 +16,23 @@ public class FinishingLineInteractable : MonoBehaviour, IInteractable
     {
         
     }
-
-    public Vector2 iniPos { get; set; }
     
-    public void DetectPlayer()
+    public void DetectPlayer(Movement playerMovement = null)
     {
-        throw new System.NotImplementedException();
+        Debug.LogError("DetectPlayer");
+        StartCoroutine(GameManager.Instance.EndLevel());
     }
 
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Player"))
+        {
+            DetectPlayer();
+        }
+    }
+    
+    public Vector2 iniPos { get; set; }
+    
     public void ResetInteractable()
     {
         throw new System.NotImplementedException();
@@ -32,4 +42,5 @@ public class FinishingLineInteractable : MonoBehaviour, IInteractable
     {
         throw new System.NotImplementedException();
     }
+
 }

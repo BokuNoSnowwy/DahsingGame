@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class ObjectiveLevelFinished : Objective
 {
-    public bool isLevelFinished;
+    //public bool isLevelFinished;
 
     public override void Initialization()
     {
