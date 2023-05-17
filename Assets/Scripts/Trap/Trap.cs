@@ -9,9 +9,7 @@ public class Trap : MonoBehaviour, IInteractable
 
     public void DetectPlayer(Movement playerMovement)
     {
-        throw new System.NotImplementedException();
-        //Destroy(other.gameObject);
-
+        Destroy(playerMovement.gameObject);
     }
 
     public void ListenEventGameManager()
@@ -35,12 +33,4 @@ public class Trap : MonoBehaviour, IInteractable
     {
 
     }
-
-    /*private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            Destroy(other.gameObject);
-        }
-    }*/
 }
