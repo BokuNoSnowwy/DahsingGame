@@ -39,15 +39,15 @@ public class cameraFollow : MonoBehaviour
                 newPos.y = player.transform.position.y;
                 rect.position = newPos;
             }
-            if (player.transform.position.y <= rect.position.y - cam.orthographicSize)
-            {
-                respawnPos = player.transform.position;
-                playerMove.rb.velocity = Vector2.zero;
-                playerMove.noGravity = true;
-                respawnPos.y = rect.position.y - cam.orthographicSize + 1;
-                player.transform.position = respawnPos;
-                playerMove.hasDashed = false;
-            }
+            //if (player.transform.position.y <= rect.position.y - cam.orthographicSize)
+            //{
+            //    respawnPos = player.transform.position;
+            //    playerMove.rb.velocity = Vector2.zero;
+            //    playerMove.noGravity = true;
+            //    respawnPos.y = rect.position.y - cam.orthographicSize + 1;
+            //    player.transform.position = respawnPos;
+            //    playerMove.hasDashed = false;
+            //}
         }
     }
 }
