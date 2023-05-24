@@ -3,36 +3,34 @@ using UnityEngine;
 public class ResetComplex : Interactive
 {
     [SerializeField]
-    private GameObject[] L_reset;
-    private GameObject resetActif;
+    private Reset[] L_reset;
+    private Reset resetActif;
     private int nReset;
 
     private void Start()
     {
         nReset = 0;
         resetActif = L_reset[nReset];
+        resetActif.actif = true;
     }
 
-    public override void DetectPlayer(Movement playerMovement)
+    private void Update()
     {
-        resetActif.SetActive(false);
-        if (nReset < L_reset.Length - 1)
+        if (!resetActif.actif && nReset < L_reset.Length - 1)
         {
-            nReset = nReset + 1;
+            nReset++;
             resetActif = L_reset[nReset];
-            resetActif.SetActive(true);
+            resetActif.devientActif();
         }
-        playerMovement.hasDashed = false;
-        AudioManager.instance.Play("Zap");
     }
 
     public override void ResetInteractable()
     {
         nReset = 0;
-        foreach (GameObject reset in L_reset)
+        foreach (Reset reset in L_reset)
         {
-            reset.SetActive(false);
+            reset.spriteColor = new Color(reset.spriteColor.r, reset.spriteColor.g, reset.spriteColor.b, 0.2f);
         }
-        L_reset[0].SetActive(true);
+        L_reset[0].spriteColor = new Color(L_reset[0].spriteColor.r, L_reset[0].spriteColor.g, L_reset[0].spriteColor.b, 1f);
     }
 }
