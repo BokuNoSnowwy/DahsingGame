@@ -12,10 +12,13 @@ public class PoolMovement : Movement
 
     private Vector2 forceArrow;
     private bool isPreparingDash;
+
+    private TrajectoryLine tl;
     
     // Start is called before the first frame update
     void Start()
     {
+        tl = GetComponentInChildren<TrajectoryLine>();
         base.Start();
     }
 
@@ -38,17 +41,43 @@ public class PoolMovement : Movement
             Time.timeScale = 0.2f;
         }
 
+        if (Input.GetButton("Fire1") && isPreparingDash)
+        {
+            Vector3 currentPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 endPoint = transform.position + (currentPoint - startPoint);
+            tl.RenderLine(transform.position, transform.position + (currentPoint - startPoint));
+            
+              
+            float distance = Vector3.Distance(endPoint, transform.position);
+        
+            // Distance maximale autorisée
+            float maxDistance = 1.5f; // Modifier cette valeur selon vos besoins
+        
+            // Vérifier si la distance dépasse la limite
+            if (distance > maxDistance)
+            {
+                // Réduire la distance pour atteindre la limite tout en conservant la direction
+                endPoint = transform.position + (endPoint - transform.position).normalized * maxDistance;
+            }
+            
+            //tl.RenderLine(transform.position, transform.position + (currentPoint - startPoint));
+            tl.RenderLine(transform.position, endPoint);
+        }
+
+
         if (Input.GetButtonUp("Fire1") && isPreparingDash)
         {
-            endPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            endPoint = transform.position + Camera.main.ScreenToWorldPoint(Input.mousePosition) - startPoint;
             
-            forceArrow = new Vector2(Mathf.Clamp(startPoint.x - endPoint.x, minPower.x, maxPower.x),
-                Mathf.Clamp(startPoint.y - endPoint.y, minPower.y, maxPower.y));
+            forceArrow = new Vector2(Mathf.Clamp(transform.position.x - endPoint.x, minPower.x, maxPower.x),
+                Mathf.Clamp(transform.position.y - endPoint.y, minPower.y, maxPower.y));
             
             Dash(forceArrow.x,forceArrow.y);
             
             isPreparingDash = false;
             Time.timeScale = 1;
+
+            tl.EndLine();
         }
     }
 }
