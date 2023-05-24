@@ -7,7 +7,8 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
     public bool dashAvailable => !movementScript.hasDashed;
-
+    public SpriteRenderer spriteRenderer;
+    
     public bool isAlive;
 
     [SerializeField] 
@@ -19,7 +20,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     public void Initialization()
@@ -32,14 +33,32 @@ public class Player : MonoBehaviour
         isAlive = true;
     }
 
+    private void Update()
+    {
+        if (!spriteRenderer.isVisible && isAlive)
+        {
+            Die();
+        }
+    }
+
+
     [ContextMenu("Player Die")]
-    private void Die()
+    public void Die()
     {
         Debug.LogError("Die");
+        isAlive = false;
         //Disable the player before respawning to make sure the player won't do unnecessary moves  
         gameObject.SetActive(false);
         playerDie.Invoke();
-        
+    }
+
+    public void RespawnPlayer(Vector3 position)
+    {
+        gameObject.SetActive(true);
+        gameObject.transform.position = position;
+        isAlive = true;
+        movementScript.rb.velocity = Vector2.zero;
+        movementScript.rb.gravityScale = movementScript.gravity;
     }
 
     public void AddListenerFirstDashRespawn(UnityAction action)
@@ -52,3 +71,5 @@ public class Player : MonoBehaviour
         playerDie.AddListener(action);
     }
 }
+
+

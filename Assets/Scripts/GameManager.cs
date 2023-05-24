@@ -117,8 +117,7 @@ public class GameManager : MonoBehaviour
         // Move Player 
         if (playerSpawner != null)
         {
-            playerInstance.gameObject.SetActive(true);
-            playerInstance.gameObject.transform.position = playerSpawner.position;
+            Player.RespawnPlayer(playerSpawner.position);
         }
     }
 
@@ -129,7 +128,6 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         rippleEffect.enabled = false;
         gameLevelPanel.DisplayPanel();
-        //Display the stats of the level
     }
 
     public void ReturnToLobby()
