@@ -1995,14 +1995,14 @@ MonoBehaviour:
     sceneName: 0
     nbDeath: 0
     objectivesEnemiesArray:
-    - isEnabled: 0
+    - isEnabled: 1
       success: 0
       objectiveDone: 0
       objectiveString: Defeat all the enemies
       enemiesCount: 0
       enemiesCountGoal: 2
     objectivesTimerArray:
-    - isEnabled: 1
+    - isEnabled: 0
       success: 0
       objectiveDone: 0
       objectiveString: Finish level in less than 10 seconds

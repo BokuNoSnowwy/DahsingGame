@@ -8,17 +8,17 @@ using UnityEngine.UI;
 
 public class LevelPanel : MonoBehaviour
 {
-    private TextMeshProUGUI textTitle;
-    private GameManager gameManager;
+    protected TextMeshProUGUI textTitle;
+    protected GameManager gameManager;
 
     
-    [SerializeField] private Image[] objectivesArray = new Image[3];
-    [SerializeField] private TextMeshProUGUI[] textObjectivesArray = new TextMeshProUGUI[3];
+    [SerializeField] protected Image[] objectivesArray = new Image[3];
+    [SerializeField] protected TextMeshProUGUI[] textObjectivesArray = new TextMeshProUGUI[3];
+
+    [SerializeField] protected Sprite spriteObjectiveNotAchieved; 
+    [SerializeField] protected Sprite spriteObjectiveDone;
 
     [SerializeField] private Button launchLevelButton;
-
-    [SerializeField] private Sprite spriteObjectiveNotAchieved; 
-    [SerializeField] private Sprite spriteObjectiveDone;
 
     private void Awake()
     {
@@ -38,7 +38,7 @@ public class LevelPanel : MonoBehaviour
     }
 
     // Setup level informations
-    public void SetupPanelForLevel()
+    public virtual void SetupPanelForLevel()
     {
         gameObject.SetActive(true);
         
@@ -52,7 +52,5 @@ public class LevelPanel : MonoBehaviour
             objectivesArray[i].sprite = listObjectives[i].ObjectiveDone ? spriteObjectiveDone : spriteObjectiveNotAchieved;
             textObjectivesArray[i].text = listObjectives[i].ObjectiveString;
         }
-        
-        
     }
 }
