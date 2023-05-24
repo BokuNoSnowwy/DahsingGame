@@ -9,6 +9,7 @@ public class EnemyMoving : Enemy
 
     bool isMoving;
     bool hasStartedMoving;
+    [SerializeField] bool invertRotation;
 
     [SerializeField] float moveSpeed;
 
@@ -17,6 +18,7 @@ public class EnemyMoving : Enemy
     {
         base.Start();
         GameManager.Instance.AddListenerSceneIsLoaded(PlayerStartEnemy);
+        if (invertRotation) transform.eulerAngles = new Vector3(0, 180, 0);
     }
 
     private void PlayerStartEnemy()
@@ -34,6 +36,10 @@ public class EnemyMoving : Enemy
             if(Vector2.Distance(transform.position, iniPos + target) <= 0)
             {
                 target = target == pos1 ? pos2 : pos1;
+
+                if (!invertRotation) transform.eulerAngles = target.x > transform.eulerAngles.x ? new Vector3(0, 0, 0) : new Vector3(0, 180, 0);
+                else transform.eulerAngles = target.x > transform.eulerAngles.x ? new Vector3(0, 180, 0) : new Vector3(0, 0, 0);
+
                 yield return new WaitForSeconds(.1f); //wait for .1s when reach a pos
             }
             yield return null;
