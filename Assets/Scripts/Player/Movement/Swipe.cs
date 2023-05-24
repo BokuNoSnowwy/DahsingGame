@@ -9,6 +9,13 @@ public class Swipe : Movement
     private float forceDash = 500f;
     private Vector2 direction;
 
+    new void Start()
+    {
+        base.Start();
+
+        Dash(0,0);
+    }
+
     new void Update()
     {
         base.Update();

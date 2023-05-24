@@ -7,11 +7,11 @@ public class Trampoline : Interactive
 
     public override void DetectPlayer(Movement playerMovement)
     {
-        if (playerSwipe.rb.velocity.y < 0)
+        if (playerMovement.rb.velocity.y < 0)
         {
             AudioManager.instance.Play("Trampoline");
-            playerSwipe.hasDashed = false;
-            playerSwipe.rb.AddForce(transform.up * power, ForceMode2D.Impulse);
+            playerMovement.hasDashed = false;
+            playerMovement.rb.AddForce(transform.up * power, ForceMode2D.Impulse);
         }  
     }
 }

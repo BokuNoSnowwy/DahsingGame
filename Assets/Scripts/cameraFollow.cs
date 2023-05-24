@@ -21,9 +21,9 @@ public class cameraFollow : MonoBehaviour
 
     void Update()
     {
-        if (player.transform.position.y >= rect.position.y + cam.orthographicSize/2)
+        if (player.transform.position.y >= rect.position.y)
         {
-            newPos.y = player.transform.position.y - cam.orthographicSize / 2;
+            newPos.y = player.transform.position.y;
             rect.position = newPos;
         }
         if (player.transform.position.y <= rect.position.y - cam.orthographicSize)

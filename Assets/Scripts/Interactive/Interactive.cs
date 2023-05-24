@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Interactive : MonoBehaviour, IInteractable
 {
-    public Swipe playerSwipe;
-
     public Vector2 iniPos 
     {
         get 

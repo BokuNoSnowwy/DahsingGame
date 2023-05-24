@@ -22,7 +22,7 @@ public class ResetComplex : Interactive
             resetActif = L_reset[nReset];
             resetActif.SetActive(true);
         }
-        playerSwipe.hasDashed = false;
+        playerMovement.hasDashed = false;
         AudioManager.instance.Play("Zap");
     }
 

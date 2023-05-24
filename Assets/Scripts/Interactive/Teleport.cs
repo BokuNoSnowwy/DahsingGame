@@ -8,13 +8,13 @@ public class Teleport : Interactive
 
     public override void DetectPlayer(Movement playerMovement)
     {
-        playerSwipe.hasDashed = false;
-        playerSwipe.gameObject.transform.position = exit.transform.position;
+        playerMovement.hasDashed = false;
+        playerMovement.gameObject.transform.position = exit.transform.position;
         AudioManager.instance.Play("Teleport");
         if (keepPlayer)
         {
-            playerSwipe.rb.velocity = Vector2.zero;
-            playerSwipe.noGravity = true;
+            playerMovement.rb.velocity = Vector2.zero;
+            playerMovement.noGravity = true;
         }
     }
 }

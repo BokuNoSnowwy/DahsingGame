@@ -41,7 +41,6 @@ public class TrapMoving : Trap
         {
             if (Vector2.Distance(transform.position, dest) <= 0)
             {
-                Debug.Log("Yolo");
                 if (atPos1 == true)
                 {
                     atPos1 = false;
