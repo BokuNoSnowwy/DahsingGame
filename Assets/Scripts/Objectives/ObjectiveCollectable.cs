@@ -8,8 +8,10 @@ public class ObjectiveCollectable : Objective
 {
     public bool isCollected;
     [SerializeField] private Sprite baseSprite;
+    [SerializeField] private Color baseSpriteColor;
     [SerializeField] private Sprite obtainedSprite;
-
+    [SerializeField] private Color obtainedSpriteColor;
+    
     private SpriteRenderer spriteRenderer;
 
     public override void Initialization()
@@ -39,4 +41,12 @@ public class ObjectiveCollectable : Objective
             success = false;
         }
     }
+    
+    public Sprite BaseSprite => baseSprite;
+
+    public Color BaseSpriteColor => baseSpriteColor;
+
+    public Sprite ObtainedSprite => obtainedSprite;
+
+    public Color ObtainedSpriteColor => obtainedSpriteColor;
 }

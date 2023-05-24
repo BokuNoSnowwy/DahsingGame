@@ -27,6 +27,11 @@ public class GameManager : MonoBehaviour
     private GameObject playerInstance;
     private Transform playerSpawner;
 
+    private InGameLevelPanel gameLevelPanel;
+    private RippleEffect rippleEffect;
+
+    [HideInInspector] public UnityEvent sceneIsLoaded; 
+
     [Header("Other")] 
     [SerializeField] private bool isInGame;
     [SerializeField] private bool isPaused;
@@ -80,6 +85,11 @@ public class GameManager : MonoBehaviour
     {
         playerRespawnEvent.AddListener(action);
     }
+    
+    public void AddListenerSceneIsLoaded(UnityAction action)
+    {
+        sceneIsLoaded.AddListener(action);
+    }
 
     #endregion
 
@@ -93,11 +103,14 @@ public class GameManager : MonoBehaviour
         
         GameObject player = Instantiate(playerPrefab,playerSpawner.position, Quaternion.identity);
         playerInstance = player;
+        Debug.LogError("Set Player Instance ");
         
         Player playerP = playerInstance.GetComponent<Player>();
         playerP.Initialization();
         playerP.AddListenerFirstDashRespawn(PlayerMadeFirstMove);
         playerP.AddListenerPlayerDie(RespawnPlayer);
+        
+        sceneIsLoaded.Invoke();
     }
     
     public void RespawnPlayer()
@@ -116,10 +129,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void EndLevel()
+    public IEnumerator EndLevel()
     {
+        Time.timeScale = 0;
         levelFinishedEvent.Invoke();
-        
+        yield return new WaitForSecondsRealtime(1f);
+        rippleEffect.enabled = false;
+        gameLevelPanel.DisplayPanel();
         //Display the stats of the level
     }
 
@@ -152,11 +168,21 @@ public class GameManager : MonoBehaviour
             Debug.Log("SceneIsLoading");
             yield return null;
         }
-        
+
         Debug.Log("SceneIsLoaded");
+
+        InitLevel();
         
-        //TODO Spawn Player
+    }
+
+    // Spawn Player and reset timescale
+    private void InitLevel()
+    {
+        timerLevel = 0;
+        Time.timeScale = 1;
         SpawnPlayer();
+        gameLevelPanel = FindObjectOfType<InGameLevelPanel>(true);
+        rippleEffect = FindObjectOfType<RippleEffect>();
     }
     
     #endregion
@@ -211,4 +237,13 @@ public class GameManager : MonoBehaviour
     public float TimerLevel { get => timerLevel; }
 
     public int IndexLevel { get => indexLevel; set => indexLevel = value; }
+    
+    public Player Player
+    {
+        get
+        {
+            Debug.LogError("Get Player");
+            return playerInstance.GetComponent<Player>();
+        }
+    }
 }
