@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class cameraFollow : MonoBehaviour
@@ -11,12 +12,23 @@ public class cameraFollow : MonoBehaviour
     private RectTransform rect;
     private Camera cam;
 
+    IEnumerator waitLevel()
+    {
+        while (GameObject.FindGameObjectWithTag("Player") == null)
+        {
+            Debug.Log("Waiting player");
+            yield return null;
+        }
+        Debug.Log("Player is here");
+        player = GameManager.Instance.Player.gameObject;
+    }
+
     private void Start()
     {
         rect = gameObject.GetComponent<RectTransform>();
         cam = gameObject.GetComponent<Camera>();
         newPos = rect.position;
-        playerMove = player.GetComponent<Swipe>();
+        StartCoroutine(waitLevel());
     }
 
     void Update()

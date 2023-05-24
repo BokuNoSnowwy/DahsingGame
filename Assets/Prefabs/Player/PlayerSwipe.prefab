@@ -5156,7 +5156,7 @@ MonoBehaviour:
   dashEvent:
     m_PersistentCalls:
       m_Calls: []
-  forceDash: 500
+  forceDash: 700
 --- !u!114 &7799321312800844416
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1315,7 +1315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1844628697201187410, guid: 6ac49c4884b6c8f46aac808119bc66b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2932693690896540670, guid: 6ac49c4884b6c8f46aac808119bc66b5, type: 3}
       propertyPath: playerSwipe
@@ -1325,13 +1325,17 @@ PrefabInstance:
       propertyPath: L_reset.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3830734400959054735, guid: 6ac49c4884b6c8f46aac808119bc66b5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5964678148815552666, guid: 6ac49c4884b6c8f46aac808119bc66b5, type: 3}
       propertyPath: m_Name
       value: ResetComplex
       objectReference: {fileID: 0}
     - target: {fileID: 6333967359595898499, guid: 6ac49c4884b6c8f46aac808119bc66b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6472572328001262725, guid: 6ac49c4884b6c8f46aac808119bc66b5, type: 3}
       propertyPath: m_RootOrder
@@ -1384,6 +1388,10 @@ PrefabInstance:
     - target: {fileID: 6897054727985499267, guid: 6ac49c4884b6c8f46aac808119bc66b5, type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7619969913381120017, guid: 6ac49c4884b6c8f46aac808119bc66b5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7659013396069459384, guid: 6ac49c4884b6c8f46aac808119bc66b5, type: 3}
       propertyPath: m_LocalPosition.x

@@ -48,14 +48,7 @@ public class GameManager : MonoBehaviour
         
         DontDestroyOnLoad(this);
     }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (!isPaused && isInGame)
@@ -246,4 +239,13 @@ public class GameManager : MonoBehaviour
             return playerInstance.GetComponent<Player>();
         }
     }
+    public Swipe Swipe
+    {
+        get
+        {
+            Debug.LogError("Get Swipe");
+            return playerInstance.GetComponent<Swipe>();
+        }
+    }
+
 }
