@@ -3,8 +3,8 @@ using UnityEngine.UI;
 using TMPro;
 
 namespace SlimUI.ModernMenu{
-	[System.Serializable]
-	public class ThemedUIElement : ThemedUI {
+	//[System.Serializable]
+/*public class ThemedUIElement : ThemedUI {
 		[Header("Parameters")]
 		Color outline;
 		Image image;
@@ -27,5 +27,5 @@ namespace SlimUI.ModernMenu{
 				message.GetComponent<TextMeshPro>().color = themeController.textColor;
 			}
 		}
-	}
+	}*/
 }
