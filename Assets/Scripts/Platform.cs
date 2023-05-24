@@ -27,7 +27,7 @@ public class Platform : MonoBehaviour
 
     private void Update()
     {
-        if (swipe.rb.velocity.y > 0)
+        if (swipe != null && swipe.rb.velocity.y > 0)
         {
             col.enabled = false;
         }
