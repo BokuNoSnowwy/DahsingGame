@@ -6,12 +6,15 @@ public class ResetComplex : Interactive
     private Reset[] L_reset;
     private Reset resetActif;
     private int nReset;
+    private float timerMax = 3f;
+    private float timer;
 
     private void Start()
     {
         nReset = 0;
         resetActif = L_reset[nReset];
         resetActif.actif = true;
+        timer = timerMax;
     }
 
     private void Update()
@@ -21,16 +24,28 @@ public class ResetComplex : Interactive
             nReset++;
             resetActif = L_reset[nReset];
             resetActif.devientActif();
+            timer = timerMax;
+        }
+
+        if (nReset > 0)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                ResetInteractable();
+            }
         }
     }
 
     public override void ResetInteractable()
     {
         nReset = 0;
+        timer = timerMax;
         foreach (Reset reset in L_reset)
         {
-            reset.spriteColor = new Color(reset.spriteColor.r, reset.spriteColor.g, reset.spriteColor.b, 0.2f);
+            reset.devientInactif();
         }
-        L_reset[0].spriteColor = new Color(L_reset[0].spriteColor.r, L_reset[0].spriteColor.g, L_reset[0].spriteColor.b, 1f);
+        L_reset[0].devientActif();
+        resetActif = L_reset[0];
     }
 }
