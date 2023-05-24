@@ -167,8 +167,8 @@ public static class SavingService
         {
             var objects = data[OBJECTS_KEY];
 
-            LoadObjectsAfterSceneLoad = (scene, LoadSceneMode) =>
-            {
+            //LoadObjectsAfterSceneLoad = (scene, LoadSceneMode) =>
+            //{
                 var allLoadableObjects = Object.FindObjectsOfType<MonoBehaviour>().OfType<ISaveable>().ToDictionary(o => o.SaveID, o => o);
 
                 var objectsCount = objects.Count;
@@ -192,7 +192,7 @@ public static class SavingService
                 LoadObjectsAfterSceneLoad = null;
 
                 System.GC.Collect();
-            };
+            //};
 
             SceneManager.sceneLoaded += LoadObjectsAfterSceneLoad;
         }
