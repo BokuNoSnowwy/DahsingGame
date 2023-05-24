@@ -2126,6 +2126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df961556e30bd4944baa0cc42534daef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textTitle: {fileID: 0}
   objectivesArray:
   - {fileID: 393190220}
   - {fileID: 1267587126}
@@ -2851,7 +2852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2cc388d3697f24395fd7d8ab41f286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelSelectorSceneName: ValentinScene
+  LevelSelectorSceneName: JuMenu
   collectableEvent:
     m_PersistentCalls:
       m_Calls: []

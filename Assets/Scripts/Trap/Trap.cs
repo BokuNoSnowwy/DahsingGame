@@ -9,7 +9,8 @@ public class Trap : MonoBehaviour, IInteractable
 
     public void DetectPlayer(Movement playerMovement)
     {
-        Destroy(playerMovement.gameObject);
+        //RESTART SCENE
+        playerMovement.GetComponent<Player>().Die();
     }
 
     public void ListenEventGameManager()
