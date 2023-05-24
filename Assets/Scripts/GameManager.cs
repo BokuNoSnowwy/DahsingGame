@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject playerPrefab;
     private GameObject playerInstance;
     private Transform playerSpawner;
+    private cameraFollow cameraFollow;
 
     private InGameLevelPanel gameLevelPanel;
     private RippleEffect rippleEffect;
@@ -113,7 +114,7 @@ public class GameManager : MonoBehaviour
 
         isInGame = false;
         timerLevel = 0;
-        
+        cameraFollow.rect.position = cameraFollow.firstPos;
         // Move Player 
         if (playerSpawner != null)
         {
@@ -174,6 +175,7 @@ public class GameManager : MonoBehaviour
         SpawnPlayer();
         gameLevelPanel = FindObjectOfType<InGameLevelPanel>(true);
         rippleEffect = FindObjectOfType<RippleEffect>();
+        cameraFollow = Camera.main.gameObject.GetComponent<cameraFollow>();
     }
     
     #endregion

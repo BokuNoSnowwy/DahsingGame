@@ -4,11 +4,13 @@ using UnityEngine;
 public class cameraFollow : MonoBehaviour
 {
     private GameObject player;
-    private Swipe playerMove;
     private Vector2 respawnPos;
 
     private Vector3 newPos;
-    private RectTransform rect;
+    [HideInInspector]
+    public RectTransform rect;
+    [HideInInspector]
+    public Vector3 firstPos;
     private Camera cam;
 
     IEnumerator waitLevel()
@@ -27,6 +29,7 @@ public class cameraFollow : MonoBehaviour
         rect = gameObject.GetComponent<RectTransform>();
         cam = gameObject.GetComponent<Camera>();
         newPos = rect.position;
+        firstPos = rect.position;
         StartCoroutine(waitLevel());
     }
 
@@ -39,15 +42,6 @@ public class cameraFollow : MonoBehaviour
                 newPos.y = player.transform.position.y;
                 rect.position = newPos;
             }
-            //if (player.transform.position.y <= rect.position.y - cam.orthographicSize)
-            //{
-            //    respawnPos = player.transform.position;
-            //    playerMove.rb.velocity = Vector2.zero;
-            //    playerMove.noGravity = true;
-            //    respawnPos.y = rect.position.y - cam.orthographicSize + 1;
-            //    player.transform.position = respawnPos;
-            //    playerMove.hasDashed = false;
-            //}
         }
     }
 }
