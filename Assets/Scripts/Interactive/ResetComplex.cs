@@ -3,36 +3,49 @@ using UnityEngine;
 public class ResetComplex : Interactive
 {
     [SerializeField]
-    private GameObject[] L_reset;
-    private GameObject resetActif;
+    private Reset[] L_reset;
+    private Reset resetActif;
     private int nReset;
+    private float timerMax = 3f;
+    private float timer;
 
     private void Start()
     {
         nReset = 0;
         resetActif = L_reset[nReset];
+        resetActif.actif = true;
+        timer = timerMax;
     }
 
-    public override void DetectPlayer(Movement playerMovement)
+    private void Update()
     {
-        resetActif.SetActive(false);
-        if (nReset < L_reset.Length - 1)
+        if (!resetActif.actif && nReset < L_reset.Length - 1)
         {
-            nReset = nReset + 1;
+            nReset++;
             resetActif = L_reset[nReset];
-            resetActif.SetActive(true);
+            resetActif.devientActif();
+            timer = timerMax;
         }
-        playerMovement.hasDashed = false;
-        AudioManager.instance.Play("Zap");
+
+        if (nReset > 0)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                ResetInteractable();
+            }
+        }
     }
 
     public override void ResetInteractable()
     {
         nReset = 0;
-        foreach (GameObject reset in L_reset)
+        timer = timerMax;
+        foreach (Reset reset in L_reset)
         {
-            reset.SetActive(false);
+            reset.devientInactif();
         }
-        L_reset[0].SetActive(true);
+        L_reset[0].devientActif();
+        resetActif = L_reset[0];
     }
 }

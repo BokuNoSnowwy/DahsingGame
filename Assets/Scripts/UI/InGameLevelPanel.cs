@@ -7,19 +7,36 @@ using UnityEngine.UI;
 public class InGameLevelPanel : LevelPanel
 {
     [SerializeField] private Button nextLevelButton;
-    // Start is called before the first frame update
+    
     void Start()
     {
-        nextLevelButton.onClick.AddListener(GameManager.Instance.ReturnToLobby);
+        
     }
+    
+    public void Initialization()
+    {
+        gameManager = GameManager.Instance;
+        nextLevelButton.onClick.AddListener(gameManager.ReturnToLobby);
+    }
+    
 
     public void DisplayPanel()
     {
+        Initialization();
+        SetupPanelForLevel();
         gameObject.SetActive(true);
     }
 
     public override void SetupPanelForLevel()
     {
-        base.SetupPanelForLevel();
+        Debug.LogError(gameManager);
+        List<Objective> listObjectives = gameManager.GetActualLevel().GetObjectives();
+        
+        textTitle.text = "Level " + gameManager.GetActualLevel().sceneName + " Finished !";
+
+        for (int i = 0; i < listObjectives.Count; i++)
+        {
+            objectivesArray[i].sprite = listObjectives[i].Success ? spriteObjectiveDone : spriteObjectiveNotAchieved;
+        }
     }
 }

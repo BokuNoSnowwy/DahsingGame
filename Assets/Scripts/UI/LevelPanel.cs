@@ -8,10 +8,9 @@ using UnityEngine.UI;
 
 public class LevelPanel : MonoBehaviour
 {
-    protected TextMeshProUGUI textTitle;
     protected GameManager gameManager;
 
-    
+    [SerializeField] protected TextMeshProUGUI textTitle;
     [SerializeField] protected Image[] objectivesArray = new Image[3];
     [SerializeField] protected TextMeshProUGUI[] textObjectivesArray = new TextMeshProUGUI[3];
 
@@ -26,9 +25,9 @@ public class LevelPanel : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        launchLevelButton.onClick.AddListener(gameManager.LaunchLevel);    
+        launchLevelButton.onClick.AddListener(gameManager.LaunchLevel);
     }
 
     // Update is called once per frame

@@ -11,6 +11,7 @@ public class Trampoline : Interactive
         {
             AudioManager.instance.Play("Trampoline");
             playerMovement.hasDashed = false;
+            playerMovement.rb.velocity = Vector2.zero;
             playerMovement.rb.AddForce(transform.up * power, ForceMode2D.Impulse);
         }  
     }

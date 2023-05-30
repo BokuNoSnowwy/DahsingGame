@@ -37,4 +37,10 @@ public class Bullet : Enemy, IObjectPoolNotifier
     {
         Invoke("Die", deathDelay);
     }
+
+    public override void ResetInteractable()
+    {
+        //base.ResetInteractable();
+        Die();
+    }
 }

@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject playerPrefab;
     private GameObject playerInstance;
     private Transform playerSpawner;
+    private cameraFollow cameraFollow;
 
     private InGameLevelPanel gameLevelPanel;
     private RippleEffect rippleEffect;
@@ -48,14 +49,7 @@ public class GameManager : MonoBehaviour
         
         DontDestroyOnLoad(this);
     }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (!isPaused && isInGame)
@@ -120,12 +114,11 @@ public class GameManager : MonoBehaviour
 
         isInGame = false;
         timerLevel = 0;
-        
+        cameraFollow.rect.position = cameraFollow.firstPos;
         // Move Player 
         if (playerSpawner != null)
         {
-            playerInstance.gameObject.SetActive(true);
-            playerInstance.gameObject.transform.position = playerSpawner.position;
+            Player.RespawnPlayer(playerSpawner.position);
         }
     }
 
@@ -136,7 +129,6 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         rippleEffect.enabled = false;
         gameLevelPanel.DisplayPanel();
-        //Display the stats of the level
     }
 
     public void ReturnToLobby()
@@ -183,6 +175,7 @@ public class GameManager : MonoBehaviour
         SpawnPlayer();
         gameLevelPanel = FindObjectOfType<InGameLevelPanel>(true);
         rippleEffect = FindObjectOfType<RippleEffect>();
+        cameraFollow = Camera.main.gameObject.GetComponent<cameraFollow>();
     }
     
     #endregion
@@ -246,4 +239,13 @@ public class GameManager : MonoBehaviour
             return playerInstance.GetComponent<Player>();
         }
     }
+    public Swipe Swipe
+    {
+        get
+        {
+            Debug.LogError("Get Swipe");
+            return playerInstance.GetComponent<Swipe>();
+        }
+    }
+
 }

@@ -62,7 +62,6 @@ public class EnemyShooting : Enemy
             isShooting = true;
             StartCoroutine(Shooting());
         }
-
         hasStartedShooting = true;
 
     }
@@ -74,7 +73,7 @@ public class EnemyShooting : Enemy
         {
             part.gameObject.SetActive(true);
         }
-
+        StopAllCoroutines();
         isShooting = false;
         hasStartedShooting = false;
     }

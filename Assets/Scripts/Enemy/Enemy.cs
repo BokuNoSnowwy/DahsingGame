@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour, IInteractable
         else
         {
             //RESTART SCENE
-            playerMovement.GetComponent<Player>().playerDie.Invoke();
+            playerMovement.GetComponent<Player>().Die();
         }
     }
 

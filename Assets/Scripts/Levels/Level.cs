@@ -6,11 +6,12 @@ using UnityEngine.Serialization;
 
 public enum SceneName
 {
-    Level1,
+    LevelTest,
     Level2,
     Level3,
     Level4,
-    Level5
+    Level5,
+    Level6
 }
 
 [Serializable]
