@@ -232,21 +232,26 @@ public class Movement : MonoBehaviour
         {
             if(Vector3.Distance(start, transform.position) > 6 || Time.realtimeSinceStartup - startTime > 1)
             {
-                rb.velocity = Vector2.zero;
-                dashParticle.Stop();
-                if (noGravity)
-                {
-                    rb.gravityScale = 0;
-                }
-                else
-                {
-                    rb.gravityScale = gravity;
-                }
-                GetComponent<BetterJumping>().enabled = true;
-                wallJumped = false;
-                isDashing = false;
+                EndDash();
             }
         }
+    }
+
+    private void EndDash()
+    {
+        rb.velocity = Vector2.zero;
+        dashParticle.Stop();
+        if (noGravity)
+        {
+            rb.gravityScale = 0;
+        }
+        else
+        {
+            rb.gravityScale = gravity;
+        }
+        GetComponent<BetterJumping>().enabled = true;
+        wallJumped = false;
+        isDashing = false;
     }
 
     protected IEnumerator DashWait()
@@ -371,11 +376,15 @@ public class Movement : MonoBehaviour
         if (collision.TryGetComponent(out IInteractable interactable))
         {
             interactable.DetectPlayer(this);
-            
         }
         else if (collision.transform.parent.TryGetComponent(out IInteractable interactableParent))
         {
             interactableParent.DetectPlayer(this);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        EndDash();
     }
 }
