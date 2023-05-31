@@ -129,6 +129,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
         rippleEffect.enabled = false;
         gameLevelPanel.DisplayPanel();
+        playerMovement.rb.gravityScale = playerMovement.gravity;
     }
 
     public void ReturnToLobby()

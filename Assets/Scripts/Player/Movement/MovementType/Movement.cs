@@ -192,8 +192,12 @@ public class Movement : MonoBehaviour
         jumpParticle.Play();
     }
 
+    Vector3 start = Vector3.zero;
+    float startTime = 0;
     protected void Dash(float x, float y)
     {
+        rb.gravityScale = 0;
+
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
         FindObjectOfType<RippleEffect>().Emit(Camera.main.WorldToViewportPoint(transform.position));
@@ -208,36 +212,52 @@ public class Movement : MonoBehaviour
         hasDashed = true;
         noGravity = false;
 
-        StartCoroutine(DashWait());
-    }
+        start = transform.position;
+        startTime = Time.realtimeSinceStartup;
 
-    protected IEnumerator DashWait()
-    {
+        //StartCoroutine(DashWait());
         FindObjectOfType<GhostTrail>().ShowGhost();
         StartCoroutine(GroundDash());
         DOVirtual.Float(14, 0, .8f, RigidbodyDrag);
 
         dashParticle.Play();
-        rb.gravityScale = 0;
         GetComponent<BetterJumping>().enabled = false;
         wallJumped = true;
         isDashing = true;
+    }
+
+    private void FixedUpdate()
+    {
+        if (isDashing)
+        {
+            if(Vector3.Distance(start, transform.position) > 6 || Time.realtimeSinceStartup - startTime > 1)
+            {
+                rb.velocity = Vector2.zero;
+                dashParticle.Stop();
+                if (noGravity)
+                {
+                    rb.gravityScale = 0;
+                }
+                else
+                {
+                    rb.gravityScale = gravity;
+                }
+                GetComponent<BetterJumping>().enabled = true;
+                wallJumped = false;
+                isDashing = false;
+            }
+        }
+    }
+
+    protected IEnumerator DashWait()
+    {
+
         float t = Time.realtimeSinceStartup;
+
         yield return new WaitForSeconds(.3f);
+
         Debug.Log(Time.realtimeSinceStartup - t);
-        rb.velocity = Vector2.zero;
-        dashParticle.Stop();
-        if (noGravity)
-        {
-            rb.gravityScale = 0;
-        }
-        else
-        {
-            rb.gravityScale = gravity;
-        }
-        GetComponent<BetterJumping>().enabled = true;
-        wallJumped = false;
-        isDashing = false;
+        
     }
 
     protected IEnumerator GroundDash()

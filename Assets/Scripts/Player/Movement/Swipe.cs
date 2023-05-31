@@ -37,13 +37,12 @@ public class Swipe : Movement
                 AudioManager.instance.Play("Dash");
             }
         }
-
         if (noGravity)
         {
             rb.gravityScale = 0;
         }
-
-        Debug.Log("dashSpeed : " + dashSpeed + " / speed : " + speed + " / velocity : " + rb.velocity.magnitude);
-        Debug.Log("forceDash : " + forceDash);
+        //Debug.Log("dashSpeed : " + dashSpeed + " / speed : " + speed + " / velocity : " + rb.velocity.magnitude);
+        //Debug.Log("forceDash : " + forceDash);
+        Debug.Log(rb.gravityScale);
     }
 }
