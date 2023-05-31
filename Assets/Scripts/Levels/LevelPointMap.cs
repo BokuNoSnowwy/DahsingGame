@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class LevelPointMap : MonoBehaviour
@@ -11,7 +8,7 @@ public class LevelPointMap : MonoBehaviour
     [SerializeField] private LevelPanel levelSelectionPanel;
     private Button button;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         button = GetComponent<Button>();
@@ -22,6 +19,6 @@ public class LevelPointMap : MonoBehaviour
     {
         GameManager.Instance.IndexLevel = indexLevel;
         
-        levelSelectionPanel.SetupPanelForLevel();
+        levelSelectionPanel.SetupPanelForLevel(indexLevel);
     }
 }
