@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
     public float jumpForce = 50;
     public float slideSpeed = 5;
     public float wallJumpLerp = 10;
-    public float dashSpeed = 20;
+    public float dashSpeed = 0.1f;
     public float gravity = 2;
 
     [Space]
@@ -202,10 +202,9 @@ public class Movement : MonoBehaviour
 
         anim.SetTrigger("dash");
 
-        rb.velocity = Vector2.zero;
         Vector2 dir = new Vector2(x, y);
 
-        rb.velocity += dir * dashSpeed;
+        rb.velocity = dir * dashSpeed;
         hasDashed = true;
         noGravity = false;
 
@@ -223,9 +222,10 @@ public class Movement : MonoBehaviour
         GetComponent<BetterJumping>().enabled = false;
         wallJumped = true;
         isDashing = true;
-
+        float t = Time.realtimeSinceStartup;
         yield return new WaitForSeconds(.3f);
-
+        Debug.Log(Time.realtimeSinceStartup - t);
+        rb.velocity = Vector2.zero;
         dashParticle.Stop();
         if (noGravity)
         {

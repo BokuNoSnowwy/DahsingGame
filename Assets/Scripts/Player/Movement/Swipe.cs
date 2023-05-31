@@ -6,7 +6,7 @@ public class Swipe : Movement
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
     [SerializeField]
-    private float forceDash = 500f;
+    private float forceDash = 700f;
     private Vector2 direction;
 
     new void Start()
