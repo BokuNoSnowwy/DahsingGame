@@ -23,11 +23,11 @@ public class InGameLevelPanel : LevelPanel
     public void DisplayPanel()
     {
         Initialization();
-        SetupPanelForLevel();
+        SetupPanelForLevel(0);
         gameObject.SetActive(true);
     }
 
-    public override void SetupPanelForLevel()
+    public override void SetupPanelForLevel(int index)
     {
         Debug.LogError(gameManager);
         List<Objective> listObjectives = gameManager.GetActualLevel().GetObjectives();
