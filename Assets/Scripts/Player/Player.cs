@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -17,7 +14,6 @@ public class Player : MonoBehaviour
     [HideInInspector] public UnityEvent firstDashRespawn;
     [HideInInspector] public UnityEvent playerDie;
     
-    // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -40,7 +36,6 @@ public class Player : MonoBehaviour
             Die();
         }
     }
-
 
     [ContextMenu("Player Die")]
     public void Die()
