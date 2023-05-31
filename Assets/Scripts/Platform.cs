@@ -27,7 +27,7 @@ public class Platform : MonoBehaviour
 
     private void Update()
     {
-        if (playerMovement != null && playerMovement.rb.velocity.y > 0)
+        if (playerMovement != null && /*playerMovement.rb.velocity.y > 0*/ playerMovement.transform.position.y - .5f < transform.position.y)
         {
             col.enabled = false;
         }
