@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
         Debug.LogError("Die");
         isAlive = false;
         //Disable the player before respawning to make sure the player won't do unnecessary moves  
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         playerDie.Invoke();
     }
 

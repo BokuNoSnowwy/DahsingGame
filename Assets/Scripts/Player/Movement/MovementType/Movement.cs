@@ -208,6 +208,7 @@ public class Movement : MonoBehaviour
         rb.velocity += dir * dashSpeed;
         hasDashed = true;
         noGravity = false;
+
         StartCoroutine(DashWait());
     }
 
