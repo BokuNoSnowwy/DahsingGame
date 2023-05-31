@@ -2956,6 +2956,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinishingLine
       objectReference: {fileID: 0}
+    - target: {fileID: 973390502334250232, guid: 7e5f748e7cdb68b439d67acad7f50c59, type: 3}
+      propertyPath: m_Size.y
+      value: 2.432687
+      objectReference: {fileID: 0}
+    - target: {fileID: 973390502334250232, guid: 7e5f748e7cdb68b439d67acad7f50c59, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.92643225
+      objectReference: {fileID: 0}
     - target: {fileID: 973390502334250234, guid: 7e5f748e7cdb68b439d67acad7f50c59, type: 3}
       propertyPath: m_RootOrder
       value: 1
