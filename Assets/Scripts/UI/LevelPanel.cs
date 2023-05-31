@@ -1,9 +1,7 @@
-using System;
-using System.Collections;
+
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class LevelPanel : MonoBehaviour
@@ -30,17 +28,14 @@ public class LevelPanel : MonoBehaviour
         launchLevelButton.onClick.AddListener(gameManager.LaunchLevel);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     // Setup level informations
-    public virtual void SetupPanelForLevel()
+    public virtual void SetupPanelForLevel(int index)
     {
         gameObject.SetActive(true);
-        
+
+        textTitle.text = "Level " + (index + 1);
         //TODO Create sentences depending of the objectives
         //TODO Update the stars if objectives are done
 
