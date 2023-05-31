@@ -2285,6 +2285,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2393212087237667647, guid: e97968987e465ee4f96398590b97aeb0, type: 3}
   m_PrefabInstance: {fileID: 939606227}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &939606229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 37583397023554433, guid: e97968987e465ee4f96398590b97aeb0, type: 3}
+  m_PrefabInstance: {fileID: 939606227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &939606230
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939606229}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50aed131572ab1a4694556401307a8c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &941275602
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,6 +3711,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2393212087237667647, guid: e97968987e465ee4f96398590b97aeb0, type: 3}
   m_PrefabInstance: {fileID: 1455051869}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1455051871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 37583397023554433, guid: e97968987e465ee4f96398590b97aeb0, type: 3}
+  m_PrefabInstance: {fileID: 1455051869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1455051872
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455051871}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50aed131572ab1a4694556401307a8c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1463340004
 GameObject:
   m_ObjectHideFlags: 0
