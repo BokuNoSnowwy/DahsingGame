@@ -39,6 +39,8 @@ public class Enemy : MonoBehaviour, IInteractable
     //Initialize enemy
     protected virtual void StartEnemy()
     {
+        if (GameManager.Instance.Player.isAlive)
+            return;
         transform.position = iniPos;
     }
 
