@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(spriteRenderer.isVisible);
         if (!spriteRenderer.isVisible && isAlive)
         {
             Die();
