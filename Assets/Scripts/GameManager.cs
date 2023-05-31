@@ -239,12 +239,12 @@ public class GameManager : MonoBehaviour
             return playerInstance.GetComponent<Player>();
         }
     }
-    public Swipe Swipe
+    public Movement playerMovement
     {
         get
         {
-            Debug.LogError("Get Swipe");
-            return playerInstance.GetComponent<Swipe>();
+            Debug.LogError("Get playerMovement");
+            return playerInstance.GetComponent<Movement>();
         }
     }
 
