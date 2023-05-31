@@ -3534,7 +3534,7 @@ MonoBehaviour:
       baseSpriteColor: {r: 0, g: 0, b: 0, a: 0}
       obtainedSprite: {fileID: 0}
       obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
-  playerPrefab: {fileID: 6562053868118649450, guid: 95731bcc20d8d574f93d297a8775208d, type: 3}
+  playerPrefab: {fileID: 6220314003077627839, guid: fc700b5b616a99d48ac40a3ce0b94560, type: 3}
   sceneIsLoaded:
     m_PersistentCalls:
       m_Calls: []
