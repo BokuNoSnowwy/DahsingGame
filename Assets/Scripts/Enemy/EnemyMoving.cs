@@ -73,5 +73,6 @@ public class EnemyMoving : Enemy
         base.ResetInteractable();
         isMoving = false;
         hasStartedMoving = false;
+        StopAllCoroutines();
     }
 }
