@@ -45,12 +45,13 @@ public class EnemyShooting : Enemy
     //Kill enemy
     protected override void Die()
     {
-        isShooting = false;
+        //can't die
+        /*isShooting = false;
         foreach(Transform part in turretParts)
         {
             part.gameObject.SetActive(false);
         }
-        base.Die();
+        base.Die();*/
     }
 
     //Initialize enemy
