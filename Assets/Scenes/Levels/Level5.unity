@@ -2005,12 +2005,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 973390502334250234, guid: 7e5f748e7cdb68b439d67acad7f50c59, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 14.656155
+      objectReference: {fileID: 0}
+    - target: {fileID: 973390502334250234, guid: 7e5f748e7cdb68b439d67acad7f50c59, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.66468894
+      objectReference: {fileID: 0}
+    - target: {fileID: 973390502334250234, guid: 7e5f748e7cdb68b439d67acad7f50c59, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7303734
+      value: 1.7463
       objectReference: {fileID: 0}
     - target: {fileID: 973390502334250234, guid: 7e5f748e7cdb68b439d67acad7f50c59, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 43.368538
+      value: 42.6767
       objectReference: {fileID: 0}
     - target: {fileID: 973390502334250234, guid: 7e5f748e7cdb68b439d67acad7f50c59, type: 3}
       propertyPath: m_LocalPosition.z
