@@ -28899,6 +28899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'ObjReDash A '
       objectReference: {fileID: 0}
+    - target: {fileID: 7706748503842765778, guid: 4cba2bbe45c2cc34685d240db6de96f1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7706748503842765781, guid: 4cba2bbe45c2cc34685d240db6de96f1, type: 3}
       propertyPath: m_RootOrder
       value: 0

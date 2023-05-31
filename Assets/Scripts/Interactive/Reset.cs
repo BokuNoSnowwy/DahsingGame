@@ -32,6 +32,7 @@ public class Reset : Interactive
     }
     public void devientInactif()
     {
+
         spriteColor = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0.2f);
         spriteRenderer.color = spriteColor;
         actif = false;
