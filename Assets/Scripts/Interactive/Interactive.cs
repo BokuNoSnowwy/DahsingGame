@@ -14,6 +14,11 @@ public class Interactive : MonoBehaviour, IInteractable
         }
     }
 
+    protected virtual void Start()
+    {
+        GameManager.Instance.AddListenerPlayerRespawn(ResetInteractable);
+    }
+
     public virtual void DetectPlayer(Movement playerMovement)
     {
     }

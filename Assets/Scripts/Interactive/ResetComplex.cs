@@ -9,8 +9,10 @@ public class ResetComplex : Interactive
     private float timerMax = 3f;
     private float timer;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+
         nReset = 0;
         resetActif = L_reset[nReset];
         resetActif.actif = true;
