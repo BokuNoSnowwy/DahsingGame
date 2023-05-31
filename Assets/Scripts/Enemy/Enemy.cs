@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour, IInteractable
 {
     [Range(1, 4)]
     public int life = 1;
+    int maxLife;
 
     Collider2D col;
     Renderer rend;
@@ -18,6 +19,8 @@ public class Enemy : MonoBehaviour, IInteractable
         iniPos = transform.position;
         col = GetComponent<Collider2D>();
         rend = GetComponent<Renderer>();
+
+        maxLife = life;
 
         //TEST
         //StartEnemy();
@@ -70,5 +73,6 @@ public class Enemy : MonoBehaviour, IInteractable
         transform.position = iniPos;
         col.enabled = true;
         rend.enabled = true;
+        life = maxLife;
     }
 }
