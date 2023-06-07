@@ -80,6 +80,8 @@ public class PoolMovement : Movement
                 Time.timeScale = 1;
                 AudioManager.instance.Play("Dash");
                 tl.EndLine();
+                
+                dashEvent.Invoke();
             }
         }
     }

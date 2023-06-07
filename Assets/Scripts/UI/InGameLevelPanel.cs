@@ -29,7 +29,6 @@ public class InGameLevelPanel : LevelPanel
 
     public override void SetupPanelForLevel(int index)
     {
-        Debug.LogError(gameManager);
         List<Objective> listObjectives = gameManager.GetActualLevel().GetObjectives();
         
         textTitle.text = "Level " + gameManager.GetActualLevel().sceneName + " Finished !";
