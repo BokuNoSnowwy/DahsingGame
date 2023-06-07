@@ -1055,7 +1055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 313917799}
   - component: {fileID: 313917800}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17883,7 +17883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 671106872}
   - component: {fileID: 671106873}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17940,7 +17940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 747614291}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}

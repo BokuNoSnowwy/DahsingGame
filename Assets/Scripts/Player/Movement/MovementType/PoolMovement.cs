@@ -26,9 +26,10 @@ public class PoolMovement : Movement
     void Update()
     {
         base.Update();
+        DashMovement();
     }
 
-    public override void DashMovement()
+    public void DashMovement()
     {
         if (!hasDashed)
         {
@@ -73,6 +74,8 @@ public class PoolMovement : Movement
 
                 forceArrow = new Vector2(Mathf.Clamp(transform.position.x - endPoint.x, minPower.x, maxPower.x),
                     Mathf.Clamp(transform.position.y - endPoint.y, minPower.y, maxPower.y));
+
+                dashDistance = forceArrow.magnitude * 2.5f;
 
                 Dash(forceArrow.x, forceArrow.y);
 

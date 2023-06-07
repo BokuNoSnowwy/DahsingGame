@@ -13,7 +13,7 @@ public class Swipe : Movement
     {
         base.Start();
 
-        Dash(0,0);
+        //Dash(0,0);
     }
 
     new void Update()
@@ -41,8 +41,5 @@ public class Swipe : Movement
         {
             rb.gravityScale = 0;
         }
-        //Debug.Log("dashSpeed : " + dashSpeed + " / speed : " + speed + " / velocity : " + rb.velocity.magnitude);
-        //Debug.Log("forceDash : " + forceDash);
-        Debug.Log(rb.gravityScale);
     }
 }
