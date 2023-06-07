@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PoolMovement : Movement
 {
-    private Vector2 minPower = Vector2.one * -2;
-    private Vector2 maxPower = Vector2.one * 2;
+    [SerializeField] private float poolPower = 2.5f;
+
+    private Vector2 minPower => Vector2.one * -poolPower;
+    private Vector2 maxPower => Vector2.one * poolPower;
 
     private Vector3 startPoint;
     private Vector3 endPoint;
@@ -54,7 +56,7 @@ public class PoolMovement : Movement
                 float distance = Vector3.Distance(endPoint, transform.position);
 
                 // Distance maximale autorisée
-                float maxDistance = 1.5f; // Modifier cette valeur selon vos besoins
+                float maxDistance = poolPower; // Modifier cette valeur selon vos besoins
 
                 // Vérifier si la distance dépasse la limite
                 if (distance > maxDistance)
