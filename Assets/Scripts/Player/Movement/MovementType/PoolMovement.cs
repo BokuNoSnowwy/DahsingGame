@@ -26,9 +26,10 @@ public class PoolMovement : Movement
     void Update()
     {
         base.Update();
+        DashMovement();
     }
 
-    public override void DashMovement()
+    public void DashMovement()
     {
         if (!hasDashed)
         {

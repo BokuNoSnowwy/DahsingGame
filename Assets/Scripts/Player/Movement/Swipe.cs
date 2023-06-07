@@ -13,7 +13,7 @@ public class Swipe : Movement
     {
         base.Start();
 
-        Dash(0,0);
+        //Dash(0,0);
     }
 
     new void Update()
