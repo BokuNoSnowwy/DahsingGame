@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
     public float dashSpeed = 0.1f;
     public float gravity = 2;
     public float dashDistanceMax = 6;
-    private float dashDistance;
+    protected float dashDistance;
 
     [Space]
     [Header("Booleans")]
@@ -113,16 +113,24 @@ public class Movement : MonoBehaviour
         isDashing = true;
 
         //Raycast
+        if(dashDistance >= dashDistanceMax)
+        {
+
+        }
+
         RaycastHit2D hit = Physics2D.Raycast(start, dir, dashDistanceMax, layerMaskWall);
         if (hit.collider != null)
         {
-            Debug.Log(hit.distance);
-            dashDistance = hit.distance - 0.5f;
-
-            if (hit.distance < 0.6f)
+            if(hit.distance < dashDistance)
             {
-                Debug.Log("salut");
-                EndDash();
+                Debug.Log(hit.distance);
+                dashDistance = hit.distance - 0.5f;
+
+                if (hit.distance < 0.6f)
+                {
+                    Debug.Log("salut");
+                    EndDash();
+                }
             }
         }
     }

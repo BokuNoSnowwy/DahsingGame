@@ -75,6 +75,8 @@ public class PoolMovement : Movement
                 forceArrow = new Vector2(Mathf.Clamp(transform.position.x - endPoint.x, minPower.x, maxPower.x),
                     Mathf.Clamp(transform.position.y - endPoint.y, minPower.y, maxPower.y));
 
+                dashDistance = forceArrow.magnitude * 2.5f;
+
                 Dash(forceArrow.x, forceArrow.y);
 
                 isPreparingDash = false;
