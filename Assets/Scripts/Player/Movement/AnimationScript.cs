@@ -44,7 +44,6 @@ public class AnimationScript : MonoBehaviour
         {
             anim = GetComponent<Animator>();
         }
-        Debug.Log(anim);
         anim.SetTrigger(trigger);
     }
 

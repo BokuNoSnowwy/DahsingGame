@@ -17,11 +17,11 @@ public class EnemyMoving : Enemy
     public override void Start()
     {
         base.Start();
-        GameManager.Instance.AddListenerSceneIsLoaded(PlayerStartEnemy);
+        GameManager.Instance.AddListenerSceneIsLoaded(Initialization);
         if (invertRotation) transform.eulerAngles = new Vector3(0, 180, 0);
     }
 
-    private void PlayerStartEnemy()
+    private void Initialization()
     {
         GameManager.Instance.Player.AddListenerFirstDashRespawn(StartEnemy);
     }

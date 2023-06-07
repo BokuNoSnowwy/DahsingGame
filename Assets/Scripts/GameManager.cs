@@ -140,7 +140,6 @@ public class GameManager : MonoBehaviour
     {
         if (!isInGame)
         {
-            Debug.Log("PlayerMadeFirstmove");
             isInGame = true;
         }
     }
@@ -156,12 +155,10 @@ public class GameManager : MonoBehaviour
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)
         {
-            Debug.Log("SceneIsLoading");
+            // Scene is loading
             yield return null;
         }
-
-        Debug.Log("SceneIsLoaded");
-
+        // Scene is loaded
         InitLevel();
         
     }

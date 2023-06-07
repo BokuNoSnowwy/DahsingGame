@@ -5,7 +5,6 @@ public class GhostTrail : MonoBehaviour
 {
     private Movement move;
     private AnimationScript anim;
-    private SpriteRenderer sr;
     public Transform ghostsParent;
     public Color trailColor;
     public Color fadeColor;
@@ -15,24 +14,13 @@ public class GhostTrail : MonoBehaviour
 
     private void Start()
     {
-        anim = FindObjectOfType<AnimationScript>();
-        UpdatePlayer();
-        
-        if(playerInstanciator == null)
-        {
-            Debug.LogWarning("PlayerInstanciator is null");
-            return;
-        }
-        else
-        {
-            playerInstanciator.changePlayerEnvent.AddListener(UpdatePlayer);
-        }
+        GameManager.Instance.AddListenerSceneIsLoaded(UpdatePlayer);
     }
 
     private void UpdatePlayer()
     {
-        move = FindObjectOfType<Movement>();
-        sr = GetComponent<SpriteRenderer>();
+        anim = FindObjectOfType<AnimationScript>();
+        move = GameManager.Instance.Player.GetComponent<Movement>();
     }
 
     public void ShowGhost()
