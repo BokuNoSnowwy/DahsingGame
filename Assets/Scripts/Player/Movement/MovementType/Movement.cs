@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
     public float jumpForce = 50;
     public float slideSpeed = 5;
     public float wallJumpLerp = 10;
-    public float dashSpeed = 20;
+    public float dashSpeed = 0.1f;
     public float gravity = 2;
 
     [Space]
@@ -192,8 +192,12 @@ public class Movement : MonoBehaviour
         jumpParticle.Play();
     }
 
+    Vector3 start = Vector3.zero;
+    float startTime = 0;
     protected void Dash(float x, float y)
     {
+        rb.gravityScale = 0;
+
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
         FindObjectOfType<RippleEffect>().Emit(Camera.main.WorldToViewportPoint(transform.position));
@@ -202,29 +206,40 @@ public class Movement : MonoBehaviour
 
         anim.SetTrigger("dash");
 
-        rb.velocity = Vector2.zero;
         Vector2 dir = new Vector2(x, y);
 
-        rb.velocity += dir * dashSpeed;
+        rb.velocity = dir * dashSpeed;
         hasDashed = true;
         noGravity = false;
-        StartCoroutine(DashWait());
-    }
 
-    protected IEnumerator DashWait()
-    {
+        start = transform.position;
+        startTime = Time.realtimeSinceStartup;
+
+        //StartCoroutine(DashWait());
         FindObjectOfType<GhostTrail>().ShowGhost();
         StartCoroutine(GroundDash());
         DOVirtual.Float(14, 0, .8f, RigidbodyDrag);
 
         dashParticle.Play();
-        rb.gravityScale = 0;
         GetComponent<BetterJumping>().enabled = false;
         wallJumped = true;
         isDashing = true;
+    }
 
-        yield return new WaitForSeconds(.3f);
+    private void FixedUpdate()
+    {
+        if (isDashing)
+        {
+            if(Vector3.Distance(start, transform.position) > 6 || Time.realtimeSinceStartup - startTime > 1)
+            {
+                EndDash();
+            }
+        }
+    }
 
+    private void EndDash()
+    {
+        rb.velocity = Vector2.zero;
         dashParticle.Stop();
         if (noGravity)
         {
@@ -237,6 +252,17 @@ public class Movement : MonoBehaviour
         GetComponent<BetterJumping>().enabled = true;
         wallJumped = false;
         isDashing = false;
+    }
+
+    protected IEnumerator DashWait()
+    {
+
+        float t = Time.realtimeSinceStartup;
+
+        yield return new WaitForSeconds(.3f);
+
+        Debug.Log(Time.realtimeSinceStartup - t);
+        
     }
 
     protected IEnumerator GroundDash()
@@ -350,11 +376,15 @@ public class Movement : MonoBehaviour
         if (collision.TryGetComponent(out IInteractable interactable))
         {
             interactable.DetectPlayer(this);
-            
         }
         else if (collision.transform.parent.TryGetComponent(out IInteractable interactableParent))
         {
             interactableParent.DetectPlayer(this);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        EndDash();
     }
 }

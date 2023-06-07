@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    private Swipe swipe;
+    private Movement playerMovement;
     private Collider2D col;
 
     IEnumerator waitLevel()
@@ -15,7 +15,7 @@ public class Platform : MonoBehaviour
             yield return null;
         }
         Debug.Log("Player is here");
-        swipe = GameManager.Instance.Swipe;
+        playerMovement = GameManager.Instance.playerMovement;
     }
 
     private void Start()
@@ -27,7 +27,7 @@ public class Platform : MonoBehaviour
 
     private void Update()
     {
-        if (swipe != null && swipe.rb.velocity.y > 0)
+        if (playerMovement != null && /*playerMovement.rb.velocity.y > 0*/ playerMovement.transform.position.y - .5f < transform.position.y)
         {
             col.enabled = false;
         }

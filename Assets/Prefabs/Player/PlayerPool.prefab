@@ -260,8 +260,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.33}
-  m_Size: {x: 0.86, y: 0.82}
+  m_Offset: {x: 0, y: -0.091670424}
+  m_Size: {x: 0.86, y: 0.8895276}
   m_Direction: 0
 --- !u!114 &6562053868118649461
 MonoBehaviour:
@@ -297,7 +297,7 @@ MonoBehaviour:
   onRightWall: 0
   onLeftWall: 1
   wallSide: 1
-  collisionRadius: 0.1
+  collisionRadius: 0.25
   bottomOffset: {x: 0, y: -0.79}
   rightOffset: {x: 0.41, y: -0.59}
   leftOffset: {x: -0.41, y: -0.59}
@@ -318,8 +318,8 @@ MonoBehaviour:
   jumpForce: 12
   slideSpeed: 1
   wallJumpLerp: 5
-  dashSpeed: 40
-  gravity: 2
+  dashSpeed: 30
+  gravity: 0.5
   canMove: 1
   wallGrab: 0
   wallJumped: 0
@@ -434,15 +434,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5687433107252131833, guid: 9b4a8cd55e7c4f2499ae2e19bb517ecc, type: 3}
+  m_Sprite: {fileID: 2786891814681364973, guid: 9b4a8cd55e7c4f2499ae2e19bb517ecc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1.1428572, y: 0.95238096}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &6562053868127749745

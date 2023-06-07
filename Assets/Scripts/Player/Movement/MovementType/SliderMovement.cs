@@ -22,6 +22,9 @@ public class SliderMovement : Movement
         {
             if(xRaw != 0 || yRaw != 0)
                 Dash(xRaw, yRaw);
+            
+            dashEvent.Invoke();
         }
+
     }
 }

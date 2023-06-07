@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
-  shootRate: 2
+  shootRate: 1
   shootPoint: {fileID: 3408676503238155482}
   pool: {fileID: 0}
 --- !u!61 &3408676503249129190

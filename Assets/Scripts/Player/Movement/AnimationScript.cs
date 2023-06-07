@@ -40,6 +40,10 @@ public class AnimationScript : MonoBehaviour
 
     public void SetTrigger(string trigger)
     {
+        if (!anim)
+        {
+            anim = GetComponent<Animator>();
+        }
         anim.SetTrigger(trigger);
     }
 

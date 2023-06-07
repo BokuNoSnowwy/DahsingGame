@@ -20,10 +20,10 @@ public class EnemyShooting : Enemy
     {
         base.Start();
         turretParts = GetComponentsInChildren<Transform>();
-        GameManager.Instance.AddListenerSceneIsLoaded(PlayerStartEnemy);
+        GameManager.Instance.AddListenerSceneIsLoaded(Initialization);
     }
 
-    private void PlayerStartEnemy()
+    private void Initialization()
     {
         GameManager.Instance.Player.AddListenerFirstDashRespawn(StartEnemy);
     }
@@ -32,7 +32,6 @@ public class EnemyShooting : Enemy
     //Shoot bullet
     IEnumerator Shooting()
     {
-        Debug.LogError("Shooting");
         while (isShooting)
         {
             GameObject bullet = pool.GetObject()/*Instantiate(bulletPrefab, shootPoint.position, transform.rotation)*/;
@@ -45,12 +44,13 @@ public class EnemyShooting : Enemy
     //Kill enemy
     protected override void Die()
     {
-        isShooting = false;
+        //can't die
+        /*isShooting = false;
         foreach(Transform part in turretParts)
         {
             part.gameObject.SetActive(false);
         }
-        base.Die();
+        base.Die();*/
     }
 
     //Initialize enemy

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FinishingLineInteractable : MonoBehaviour, IInteractable
 {
+    private bool playerHasFinished;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,15 +20,15 @@ public class FinishingLineInteractable : MonoBehaviour, IInteractable
     
     public void DetectPlayer(Movement playerMovement = null)
     {
-        Debug.LogError("DetectPlayer");
         StartCoroutine(GameManager.Instance.EndLevel());
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Player") && !playerHasFinished)
         {
             DetectPlayer();
+            playerHasFinished = true;
         }
     }
     

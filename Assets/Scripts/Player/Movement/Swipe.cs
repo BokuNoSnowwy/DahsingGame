@@ -6,7 +6,7 @@ public class Swipe : Movement
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
     [SerializeField]
-    private float forceDash = 500f;
+    private float forceDash = 700f;
     private Vector2 direction;
 
     new void Start()
@@ -37,10 +37,12 @@ public class Swipe : Movement
                 AudioManager.instance.Play("Dash");
             }
         }
-
         if (noGravity)
         {
             rb.gravityScale = 0;
         }
+        //Debug.Log("dashSpeed : " + dashSpeed + " / speed : " + speed + " / velocity : " + rb.velocity.magnitude);
+        //Debug.Log("forceDash : " + forceDash);
+        Debug.Log(rb.gravityScale);
     }
 }

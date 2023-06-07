@@ -13,30 +13,45 @@ public class TrapMoving : Trap
     private Vector2 pos1Vector;
     private Vector2 pos2Vector;
 
-    private bool isMoving = true;
+    private bool isMoving = false;
     private bool atPos1 = true;
     private bool atPos2 = false;
 
+    public Vector2 iniPos { get; set; }
 
     // Start is called before the first frame update
     void Start()
     {
+        iniPos = transform.position;
         pos1Vector = pos1.transform.position;
         pos2Vector = pos2.transform.position;
 
         dest = pos2Vector;
+        
+        GameManager.Instance.AddListenerSceneIsLoaded(PlayerStartTrap);
+    }
+    
+    private void PlayerStartTrap()
+    {
+        GameManager.Instance.AddListenerPlayerRespawn(ResetInteractable);
+        GameManager.Instance.Player.AddListenerFirstDashRespawn(StartTrap);
+    }
 
+    private void StartTrap()
+    {
         StartCoroutine(Moving());
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void ResetInteractable()
     {
-
+        StopAllCoroutines();
+        isMoving = false;
+        transform.position = iniPos;
     }
 
     IEnumerator Moving()
     {
+        isMoving = true;
         while (isMoving)
         {
             if (Vector2.Distance(transform.position, dest) <= 0)

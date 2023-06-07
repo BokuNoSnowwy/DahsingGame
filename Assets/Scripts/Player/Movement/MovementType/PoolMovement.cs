@@ -30,54 +30,59 @@ public class PoolMovement : Movement
 
     public override void DashMovement()
     {
-        if (Input.GetButtonDown("Fire1") && !isPreparingDash)
+        if (!hasDashed)
         {
-            //TODO Faire apparaitre la fleche style billard
-            // Slow motion du jeu
-
-            startPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            isPreparingDash = true;
-
-            Time.timeScale = 0.2f;
-        }
-
-        if (Input.GetButton("Fire1") && isPreparingDash)
-        {
-            Vector3 currentPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 endPoint = transform.position + (currentPoint - startPoint);
-            tl.RenderLine(transform.position, transform.position + (currentPoint - startPoint));
-            
-              
-            float distance = Vector3.Distance(endPoint, transform.position);
-        
-            // Distance maximale autorisée
-            float maxDistance = 1.5f; // Modifier cette valeur selon vos besoins
-        
-            // Vérifier si la distance dépasse la limite
-            if (distance > maxDistance)
+            if (Input.GetButtonDown("Fire1") && !isPreparingDash)
             {
-                // Réduire la distance pour atteindre la limite tout en conservant la direction
-                endPoint = transform.position + (endPoint - transform.position).normalized * maxDistance;
+                //TODO Faire apparaitre la fleche style billard
+                // Slow motion du jeu
+
+                startPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                isPreparingDash = true;
+
+                Time.timeScale = 0.2f;
             }
-            
-            //tl.RenderLine(transform.position, transform.position + (currentPoint - startPoint));
-            tl.RenderLine(transform.position, endPoint);
-        }
+
+            if (Input.GetButton("Fire1") && isPreparingDash)
+            {
+                Vector3 currentPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector3 endPoint = transform.position + (currentPoint - startPoint);
+                tl.RenderLine(transform.position, transform.position + (currentPoint - startPoint));
 
 
-        if (Input.GetButtonUp("Fire1") && isPreparingDash)
-        {
-            endPoint = transform.position + Camera.main.ScreenToWorldPoint(Input.mousePosition) - startPoint;
-            
-            forceArrow = new Vector2(Mathf.Clamp(transform.position.x - endPoint.x, minPower.x, maxPower.x),
-                Mathf.Clamp(transform.position.y - endPoint.y, minPower.y, maxPower.y));
-            
-            Dash(forceArrow.x,forceArrow.y);
-            
-            isPreparingDash = false;
-            Time.timeScale = 1;
-            AudioManager.instance.Play("Dash");
-            tl.EndLine();
+                float distance = Vector3.Distance(endPoint, transform.position);
+
+                // Distance maximale autorisée
+                float maxDistance = 1.5f; // Modifier cette valeur selon vos besoins
+
+                // Vérifier si la distance dépasse la limite
+                if (distance > maxDistance)
+                {
+                    // Réduire la distance pour atteindre la limite tout en conservant la direction
+                    endPoint = transform.position + (endPoint - transform.position).normalized * maxDistance;
+                }
+
+                //tl.RenderLine(transform.position, transform.position + (currentPoint - startPoint));
+                tl.RenderLine(transform.position, endPoint);
+            }
+
+
+            if (Input.GetButtonUp("Fire1") && isPreparingDash)
+            {
+                endPoint = transform.position + Camera.main.ScreenToWorldPoint(Input.mousePosition) - startPoint;
+
+                forceArrow = new Vector2(Mathf.Clamp(transform.position.x - endPoint.x, minPower.x, maxPower.x),
+                    Mathf.Clamp(transform.position.y - endPoint.y, minPower.y, maxPower.y));
+
+                Dash(forceArrow.x, forceArrow.y);
+
+                isPreparingDash = false;
+                Time.timeScale = 1;
+                AudioManager.instance.Play("Dash");
+                tl.EndLine();
+                
+                dashEvent.Invoke();
+            }
         }
     }
 }
