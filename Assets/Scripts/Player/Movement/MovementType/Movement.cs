@@ -55,7 +55,8 @@ public class Movement : MonoBehaviour
     protected float yRaw;
 
     [Header("Raycast")]
-    int layerMaskDash;
+    int layerMaskGround;
+    int layerMaskWall;
     [SerializeField] private GameObject rightRay, leftRay;
 
     // Start is called before the first frame update
@@ -65,7 +66,9 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<AnimationScript>();
         dashDistance = dashDistanceMax;
-        layerMaskDash = LayerMask.GetMask("Ground"); 
+        layerMaskGround = LayerMask.GetMask("Ground");
+        layerMaskWall = LayerMask.GetMask("Wall");
+
     }
 
     // Update is called once per frame
@@ -101,8 +104,8 @@ public class Movement : MonoBehaviour
             wallSlide = false;
         }
 
-        RaycastHit2D leftHit = Physics2D.Raycast(leftRay.transform.position, Vector2.down, 1f, layerMaskDash);
-        RaycastHit2D rightHit = Physics2D.Raycast(rightRay.transform.position, Vector2.down, 1f, layerMaskDash);
+        RaycastHit2D leftHit = Physics2D.Raycast(leftRay.transform.position, Vector2.down, 1f, layerMaskGround);
+        RaycastHit2D rightHit = Physics2D.Raycast(rightRay.transform.position, Vector2.down, 1f, layerMaskGround);
 
         Debug.DrawRay(leftRay.transform.position, Vector2.down, Color.red, 2f);
         Debug.DrawRay(rightRay.transform.position, Vector2.down, Color.red, 2f);
@@ -151,11 +154,11 @@ public class Movement : MonoBehaviour
                 WallJump();
         }
 
-        if ((leftHit.collider != null || rightHit.collider != null) && !groundTouch)
-        {
-            GroundTouch();
-            groundTouch = true;
-        }
+        //if ((leftHit.collider != null || rightHit.collider != null) && !groundTouch)
+        //{
+        //    GroundTouch();
+        //    groundTouch = true;
+        //}
 
         if(leftHit.collider == null && rightHit.collider == null && groundTouch)
         {
@@ -201,6 +204,7 @@ public class Movement : MonoBehaviour
         side = anim.sr.flipX ? -1 : 1;
 
         jumpParticle.Play();
+
         EndDash();
     }
 
@@ -209,7 +213,7 @@ public class Movement : MonoBehaviour
     protected void Dash(float x, float y)
     {
         rb.gravityScale = 0;
-
+        GetComponent<Collider2D>().isTrigger = true;
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
         FindObjectOfType<RippleEffect>().Emit(Camera.main.WorldToViewportPoint(transform.position));
@@ -238,7 +242,7 @@ public class Movement : MonoBehaviour
         isDashing = true;
 
         //Raycast
-        RaycastHit2D hit = Physics2D.Raycast(start, dir, dashDistanceMax, layerMaskDash);
+        RaycastHit2D hit = Physics2D.Raycast(start, dir, dashDistanceMax, layerMaskWall);
         if (hit.collider != null)
         {
             Debug.Log(hit.distance);
@@ -279,6 +283,7 @@ public class Movement : MonoBehaviour
         GetComponent<BetterJumping>().enabled = true;
         wallJumped = false;
         isDashing = false;
+        GetComponent<Collider2D>().isTrigger = false;
     }
 
     protected IEnumerator DashWait()
@@ -412,6 +417,11 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        EndDash();
+        hasDashed = false;
+        if (collision.gameObject.layer == 7)
+        {
+            Debug.Log("mur");
+            EndDash();
+        }     
     }
 }
