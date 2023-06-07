@@ -4,12 +4,12 @@ public class Trampoline : Interactive
 {
     [SerializeField]
     private float power = 50;
-    private Animation anim;
+    //private Animation anim;
 
 
     void Start()
     {
-        anim = gameObject.GetComponent<Animation>();
+        //anim = gameObject.GetComponent<Animation>();
     }
 
 
@@ -21,7 +21,7 @@ public class Trampoline : Interactive
             playerMovement.hasDashed = false;
             playerMovement.rb.velocity = Vector2.zero;
             playerMovement.rb.AddForce(transform.up * power, ForceMode2D.Impulse);
-            anim.Play("Jumppad");
+            //anim.Play("Jumppad");
         }
     }
 }
