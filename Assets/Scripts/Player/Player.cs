@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
         movementScript.dashEvent.AddListener(() =>
         {
             firstDashRespawn.Invoke();
+            movementScript.dashEvent.RemoveAllListeners();
         });
 
         isAlive = true;
@@ -40,7 +41,6 @@ public class Player : MonoBehaviour
     [ContextMenu("Player Die")]
     public void Die()
     {
-        Debug.LogError("Die");
         isAlive = false;
         //Disable the player before respawning to make sure the player won't do unnecessary moves  
         //gameObject.SetActive(false);
@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
         isAlive = true;
         movementScript.rb.velocity = Vector2.zero;
         movementScript.rb.gravityScale = movementScript.gravity;
+        Initialization();
     }
 
     public void AddListenerFirstDashRespawn(UnityAction action)

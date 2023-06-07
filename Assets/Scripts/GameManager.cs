@@ -97,8 +97,7 @@ public class GameManager : MonoBehaviour
         
         GameObject player = Instantiate(playerPrefab,playerSpawner.position, Quaternion.identity);
         playerInstance = player;
-        Debug.LogError("Set Player Instance ");
-        
+
         Player playerP = playerInstance.GetComponent<Player>();
         playerP.Initialization();
         playerP.AddListenerFirstDashRespawn(PlayerMadeFirstMove);
@@ -109,7 +108,6 @@ public class GameManager : MonoBehaviour
     
     public void RespawnPlayer()
     {
-        Debug.LogError("Respawn Player");
         playerRespawnEvent.Invoke();
 
         isInGame = false;
@@ -142,7 +140,6 @@ public class GameManager : MonoBehaviour
     {
         if (!isInGame)
         {
-            Debug.Log("PlayerMadeFirstmove");
             isInGame = true;
         }
     }
@@ -158,12 +155,10 @@ public class GameManager : MonoBehaviour
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)
         {
-            Debug.Log("SceneIsLoading");
+            // Scene is loading
             yield return null;
         }
-
-        Debug.Log("SceneIsLoaded");
-
+        // Scene is loaded
         InitLevel();
         
     }
@@ -236,7 +231,6 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            Debug.LogError("Get Player");
             return playerInstance.GetComponent<Player>();
         }
     }
@@ -244,7 +238,6 @@ public class GameManager : MonoBehaviour
     {
         get
         {
-            Debug.LogError("Get playerMovement");
             return playerInstance.GetComponent<Movement>();
         }
     }
