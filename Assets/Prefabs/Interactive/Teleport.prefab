@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956638170180517037}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.69, y: 7.75, z: 0.6403825}
+  m_LocalPosition: {x: 0, y: 7.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50,6 +50,8 @@ MonoBehaviour:
   entry: {fileID: 7706743907380021900}
   exit: {fileID: 4505907978241561161}
   keepPlayer: 0
+  numberOfPoints: 10
+  pointPrefab: {fileID: 5300104052489120148, guid: 16c3be7b619d4b74fb4f04bc87117df9, type: 3}
 --- !u!50 &4599381258737923621
 Rigidbody2D:
   serializedVersion: 4
@@ -96,7 +98,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4505907978241561161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.93, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
