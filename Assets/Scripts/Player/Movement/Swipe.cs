@@ -34,6 +34,8 @@ public class Swipe : Movement
                 
                 Dash(direction.x, direction.y);
 
+                dashEvent.Invoke();
+
                 AudioManager.instance.Play("Dash");
             }
         }
