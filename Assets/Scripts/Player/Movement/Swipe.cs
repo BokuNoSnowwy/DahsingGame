@@ -41,8 +41,5 @@ public class Swipe : Movement
         {
             rb.gravityScale = 0;
         }
-        //Debug.Log("dashSpeed : " + dashSpeed + " / speed : " + speed + " / velocity : " + rb.velocity.magnitude);
-        //Debug.Log("forceDash : " + forceDash);
-        Debug.Log(rb.gravityScale);
     }
 }

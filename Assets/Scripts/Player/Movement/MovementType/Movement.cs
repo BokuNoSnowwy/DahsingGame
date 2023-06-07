@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour
     public float wallJumpLerp = 10;
     public float dashSpeed = 0.1f;
     public float gravity = 2;
+    public float dashDistanceMax = 6;
+    private float dashDistance;
 
     [Space]
     [Header("Booleans")]
@@ -52,8 +54,9 @@ public class Movement : MonoBehaviour
     protected float xRaw;
     protected float yRaw;
 
-
-    
+    [Header("Raycast")]
+    int layerMaskDash;
+    [SerializeField] private GameObject rightRay, leftRay;
 
     // Start is called before the first frame update
     protected void Start()
@@ -61,6 +64,8 @@ public class Movement : MonoBehaviour
         coll = GetComponent<Collision>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<AnimationScript>();
+        dashDistance = dashDistanceMax;
+        layerMaskDash = LayerMask.GetMask("Ground"); 
     }
 
     // Update is called once per frame
@@ -95,6 +100,12 @@ public class Movement : MonoBehaviour
             wallGrab = false;
             wallSlide = false;
         }
+
+        RaycastHit2D leftHit = Physics2D.Raycast(leftRay.transform.position, Vector2.down, 1f, layerMaskDash);
+        RaycastHit2D rightHit = Physics2D.Raycast(rightRay.transform.position, Vector2.down, 1f, layerMaskDash);
+
+        Debug.DrawRay(leftRay.transform.position, Vector2.down, Color.red, 2f);
+        Debug.DrawRay(rightRay.transform.position, Vector2.down, Color.red, 2f);
 
         if (coll.onGround && !isDashing)
         {
@@ -140,13 +151,13 @@ public class Movement : MonoBehaviour
                 WallJump();
         }
 
-        if (coll.onGround && !groundTouch)
+        if ((leftHit.collider != null || rightHit.collider != null) && !groundTouch)
         {
             GroundTouch();
             groundTouch = true;
         }
 
-        if(!coll.onGround && groundTouch)
+        if(leftHit.collider == null && rightHit.collider == null && groundTouch)
         {
             groundTouch = false;
         }
@@ -190,6 +201,7 @@ public class Movement : MonoBehaviour
         side = anim.sr.flipX ? -1 : 1;
 
         jumpParticle.Play();
+        EndDash();
     }
 
     Vector3 start = Vector3.zero;
@@ -224,13 +236,27 @@ public class Movement : MonoBehaviour
         GetComponent<BetterJumping>().enabled = false;
         wallJumped = true;
         isDashing = true;
+
+        //Raycast
+        RaycastHit2D hit = Physics2D.Raycast(start, dir, dashDistanceMax, layerMaskDash);
+        if (hit.collider != null)
+        {
+            Debug.Log(hit.distance);
+            dashDistance = hit.distance - 0.5f;
+
+            if (hit.distance < 0.6f)
+            {
+                Debug.Log("salut");
+                EndDash();
+            }
+        }
     }
 
     private void FixedUpdate()
     {
         if (isDashing)
         {
-            if(Vector3.Distance(start, transform.position) > 6 || Time.realtimeSinceStartup - startTime > 1)
+            if (Vector3.Distance(start, transform.position) > dashDistance )
             {
                 EndDash();
             }
@@ -249,6 +275,7 @@ public class Movement : MonoBehaviour
         {
             rb.gravityScale = gravity;
         }
+        dashDistance = dashDistanceMax;
         GetComponent<BetterJumping>().enabled = true;
         wallJumped = false;
         isDashing = false;
