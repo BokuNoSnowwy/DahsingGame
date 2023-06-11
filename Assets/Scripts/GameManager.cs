@@ -50,6 +50,11 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+    private void Start()
+    {
+        SavingService.LoadGame("LevelsData.json");
+    }
+
     void Update()
     {
         if (!isPaused && isInGame)
@@ -132,8 +137,19 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToLobby()
     {
-        SceneManager.LoadSceneAsync(LevelSelectorSceneName);
+        StartCoroutine(ReturnToLobbyAsync());
         ResetLevelListeners();
+    }
+
+    private IEnumerator ReturnToLobbyAsync()
+    {
+        var asyncLoadLevel = SceneManager.LoadSceneAsync(LevelSelectorSceneName);
+        while (!asyncLoadLevel.isDone)
+        {
+            //LoadingScene
+            yield return null;
+        }
+        SavingService.SaveGame("LevelsData.json");
     }
 
     public void PlayerMadeFirstMove()
