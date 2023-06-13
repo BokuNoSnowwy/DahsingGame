@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     [ContextMenu("Player Die")]
     public void Die()
     {
+        AudioManager.instance.Play("PlayerDie");
         isAlive = false;
         //Disable the player before respawning to make sure the player won't do unnecessary moves  
         //gameObject.SetActive(false);
