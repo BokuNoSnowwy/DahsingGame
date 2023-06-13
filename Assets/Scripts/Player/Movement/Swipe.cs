@@ -20,7 +20,7 @@ public class Swipe : Movement
     {
         base.Update();
 
-        if (!hasDashed)
+        if (!hasDashed && !GameManager.Instance.isInTuto)
         {
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {

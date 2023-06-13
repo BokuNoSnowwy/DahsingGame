@@ -27,6 +27,10 @@ public class Level
     public ObjectiveLevelFinished objectiveLevelFinished;
     public ObjectiveCollectable objectiveCollectable;
 
+    [Header("Tutorial")]
+    public bool hasTutorial;
+    public GameObject tutorialPrefab;
+
     public void SetupObjectives()
     {
         foreach (var objective in GetObjectives())

@@ -33,7 +33,7 @@ public class PoolMovement : Movement
 
     public void DashMovement()
     {
-        if (!hasDashed)
+        if (!hasDashed && !GameManager.Instance.isInTuto)
         {
             if (Input.GetButtonDown("Fire1") && !isPreparingDash)
             {

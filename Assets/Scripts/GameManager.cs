@@ -36,7 +36,8 @@ public class GameManager : MonoBehaviour
     [Header("Other")] 
     [SerializeField] private bool isInGame;
     [SerializeField] private bool isPaused;
-    
+    public bool isInTuto;
+
     private void Awake()
     {
         if(Instance == null)
@@ -185,6 +186,14 @@ public class GameManager : MonoBehaviour
         timerLevel = 0;
         Time.timeScale = 1;
         SpawnPlayer();
+
+        Level myLevel = GetActualLevel();
+        if (myLevel.hasTutorial)
+        {
+            isInTuto = true;
+            Instantiate(myLevel.tutorialPrefab);
+        }
+
         gameLevelPanel = FindObjectOfType<InGameLevelPanel>(true);
         rippleEffect = FindObjectOfType<RippleEffect>();
         cameraFollow = Camera.main.gameObject.GetComponent<cameraFollow>();
