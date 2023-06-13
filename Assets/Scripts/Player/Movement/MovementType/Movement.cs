@@ -115,10 +115,11 @@ public class Movement : MonoBehaviour
         //Raycast
         if(dashDistance >= dashDistanceMax)
         {
-
+            
         }
 
-        RaycastHit2D hit = Physics2D.Raycast(start, dir, dashDistanceMax, layerMaskWall);
+        RaycastHit2D hit = Physics2D.Raycast(start, dir, dashDistanceMax + 2, layerMaskWall);
+        Debug.DrawRay(start, dir, Color.red, 2f);
         if (hit.collider != null)
         {
             if(hit.distance < dashDistance)
@@ -132,7 +133,11 @@ public class Movement : MonoBehaviour
                     EndDash();
                 }
             }
+            else
+                Debug.Log("large");
         }
+        else
+            Debug.Log("large2");
     }
 
     private void FixedUpdate()
@@ -146,7 +151,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void EndDash()
+    public void EndDash()
     {
         rb.velocity = Vector2.zero;
         dashParticle.Stop();

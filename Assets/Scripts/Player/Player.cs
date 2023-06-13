@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     {
         if (!spriteRenderer.isVisible && isAlive)
         {
+            Debug.LogWarning("out of camera");
             Die();
         }
     }
@@ -42,6 +43,7 @@ public class Player : MonoBehaviour
     public void Die()
     {
         AudioManager.instance.Play("PlayerDie");
+        movementScript.EndDash();
         isAlive = false;
         //Disable the player before respawning to make sure the player won't do unnecessary moves  
         //gameObject.SetActive(false);
