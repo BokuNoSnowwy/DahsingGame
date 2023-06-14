@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
-  shootRate: 1
+  shootRate: 1.5
   shootPoint: {fileID: 3408676503238155482}
   pool: {fileID: 1625906769790774941, guid: 7d1b8b2f8cef15449a620ee724940cc4, type: 3}
 --- !u!61 &3408676503249129190
