@@ -75,4 +75,5 @@ public class EnemyMoving : Enemy
         hasStartedMoving = false;
         //StopAllCoroutines();
     }
+    
 }

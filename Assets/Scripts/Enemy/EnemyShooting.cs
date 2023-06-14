@@ -77,4 +77,9 @@ public class EnemyShooting : Enemy
         isShooting = false;
         hasStartedShooting = false;
     }
+    
+    public override void DetectPlayer(Movement playerMovement)
+    {
+        Debug.LogError("Enemy Shooting Detect Player");
+    }
 }

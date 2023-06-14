@@ -87,6 +87,7 @@ public class Movement : MonoBehaviour
     float startTime = 0;
     protected void Dash(float x, float y)
     {
+        rb.isKinematic = false;
         rb.gravityScale = 0;
         GetComponent<Collider2D>().isTrigger = true;
         Camera.main.transform.DOComplete();

@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour, IInteractable
     }
 
     //Launch when player collide
-    public void DetectPlayer(Movement playerMovement)
+    public virtual void DetectPlayer(Movement playerMovement)
     {
         if (playerMovement.isDashing)
         {

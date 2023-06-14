@@ -21,10 +21,11 @@ public class Teleport : Interactive
         playerMovement.hasDashed = false;
         playerMovement.gameObject.transform.position = exit.transform.position;
         AudioManager.instance.Play("Teleport");
+        playerMovement.rb.velocity = Vector2.zero;
         if (keepPlayer)
         {
-            playerMovement.rb.velocity = Vector2.zero;
             playerMovement.noGravity = true;
+            playerMovement.rb.isKinematic = true;
         }
     }
 
