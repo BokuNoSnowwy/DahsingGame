@@ -124,12 +124,12 @@ public class Movement : MonoBehaviour
         {
             if(hit.distance < dashDistance)
             {
-                Debug.Log(hit.distance);
+                Debug.Log("small");
                 dashDistance = hit.distance - 0.5f;
 
-                if (hit.distance < 0.6f)
+                if (hit.distance < 0.8f)
                 {
-                    Debug.Log("salut");
+                    Debug.Log("small2");
                     EndDash();
                 }
             }
