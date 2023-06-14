@@ -157,6 +157,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         SavingService.SaveGame("LevelsData.json");
+        FindObjectOfType<LevelList>().GoToLevelList();
     }
 
     public void PlayerMadeFirstMove()

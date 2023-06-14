@@ -5,8 +5,15 @@ using UnityEngine.UI;
 
 public class LevelList : MonoBehaviour
 {
+    [SerializeField] private GameObject buttonLevel, buttonSettings, levelsPanel, buttBack;
+
     public void GoToLevelList()
     {
+        buttonLevel.SetActive(false);
+        buttonSettings.SetActive(false);
+        levelsPanel.SetActive(true);
+        buttBack.SetActive(true);
+
         GameObject levelContents = FindObjectOfType<ScrollRect>().transform.GetChild(0).gameObject;
         for (int i = 0; i <= GameManager.Instance.lvlUnlock; i++)
         {
