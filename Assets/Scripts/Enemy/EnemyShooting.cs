@@ -20,13 +20,15 @@ public class EnemyShooting : Enemy
     {
         base.Start();
         turretParts = GetComponentsInChildren<Transform>();
-        GameManager.Instance.AddListenerSceneIsLoaded(Initialization);
+        //GameManager.Instance.AddListenerSceneIsLoaded(Initialization);
+        isShooting = true;
+        StartCoroutine(Shooting());
     }
 
-    private void Initialization()
+    /*private void Initialization()
     {
         GameManager.Instance.Player.AddListenerFirstDashRespawn(StartEnemy);
-    }
+    }*/
 
 
     //Shoot bullet
@@ -76,6 +78,8 @@ public class EnemyShooting : Enemy
         StopAllCoroutines();
         isShooting = false;
         hasStartedShooting = false;
+
+        StartEnemy();
     }
     
     public override void DetectPlayer(Movement playerMovement)
