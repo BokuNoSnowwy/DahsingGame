@@ -15,7 +15,8 @@ public enum SceneName
     LevelABCD,
     LevelABCDE,
     LevelD,
-    LevelF
+    LevelF,
+    LevelABCDEF
 }
 
 [Serializable]
@@ -33,6 +34,7 @@ public class Level
 
     [Header("Tutorial")]
     public bool hasTutorial;
+    public bool tutorialCompleted;
     public GameObject tutorialPrefab;
 
     public void SetupObjectives()
