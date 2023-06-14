@@ -61,7 +61,7 @@ MonoBehaviour:
   indexLevel: 0
   levelList:
   - objectivesAreViables: 1
-    sceneName: 10
+    sceneName: 0
     nbDeath: 0
     objectivesEnemiesArray:
     - isEnabled: 1
@@ -99,6 +99,7 @@ MonoBehaviour:
       obtainedSprite: {fileID: 21300000, guid: 216c53aef79eaaf40a1800cc5e542dc3, type: 3}
       obtainedSpriteColor: {r: 1, g: 1, b: 1, a: 0.14901961}
     hasTutorial: 1
+    tutorialCompleted: 0
     tutorialPrefab: {fileID: 444784056341609641, guid: fef0deec4e62beb438627c85d51addc5, type: 3}
   - objectivesAreViables: 1
     sceneName: 1
@@ -139,6 +140,7 @@ MonoBehaviour:
       obtainedSprite: {fileID: 0}
       obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
     hasTutorial: 1
+    tutorialCompleted: 0
     tutorialPrefab: {fileID: 444784056341609641, guid: 8d912a35dc6c29147b94ee0137509de9, type: 3}
   - objectivesAreViables: 0
     sceneName: 2
@@ -161,7 +163,8 @@ MonoBehaviour:
       obtainedSprite: {fileID: 0}
       obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
     hasTutorial: 1
-    tutorialPrefab: {fileID: 444784056341609641, guid: d455eda2a97daa343b79068274b13063, type: 3}
+    tutorialCompleted: 0
+    tutorialPrefab: {fileID: 444784056341609641, guid: 911a8958dbb707a48a1e2cbac32c56ed, type: 3}
   - objectivesAreViables: 0
     sceneName: 3
     nbDeath: 0
@@ -183,6 +186,7 @@ MonoBehaviour:
       obtainedSprite: {fileID: 0}
       obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
     hasTutorial: 0
+    tutorialCompleted: 0
     tutorialPrefab: {fileID: 0}
   - objectivesAreViables: 0
     sceneName: 4
@@ -205,6 +209,7 @@ MonoBehaviour:
       obtainedSprite: {fileID: 0}
       obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
     hasTutorial: 1
+    tutorialCompleted: 0
     tutorialPrefab: {fileID: 444784056341609641, guid: 3da9886fced0c314188bfd08bfd94e16, type: 3}
   - objectivesAreViables: 0
     sceneName: 5
@@ -227,6 +232,7 @@ MonoBehaviour:
       obtainedSprite: {fileID: 0}
       obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
     hasTutorial: 0
+    tutorialCompleted: 0
     tutorialPrefab: {fileID: 0}
   - objectivesAreViables: 0
     sceneName: 8
@@ -249,6 +255,7 @@ MonoBehaviour:
       obtainedSprite: {fileID: 0}
       obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
     hasTutorial: 1
+    tutorialCompleted: 0
     tutorialPrefab: {fileID: 444784056341609641, guid: 1d01120c1f0f05640a8f1a2aea331fad, type: 3}
   - objectivesAreViables: 0
     sceneName: 6
@@ -271,6 +278,7 @@ MonoBehaviour:
       obtainedSprite: {fileID: 0}
       obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
     hasTutorial: 0
+    tutorialCompleted: 0
     tutorialPrefab: {fileID: 0}
   - objectivesAreViables: 0
     sceneName: 7
@@ -293,6 +301,7 @@ MonoBehaviour:
       obtainedSprite: {fileID: 0}
       obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
     hasTutorial: 0
+    tutorialCompleted: 0
     tutorialPrefab: {fileID: 0}
   - objectivesAreViables: 0
     sceneName: 9
@@ -315,28 +324,36 @@ MonoBehaviour:
       obtainedSprite: {fileID: 0}
       obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
     hasTutorial: 1
-    tutorialPrefab: {fileID: 444784056341609641, guid: 911a8958dbb707a48a1e2cbac32c56ed, type: 3}
-  - objectivesAreViables: 0
+    tutorialCompleted: 0
+    tutorialPrefab: {fileID: 444784056341609641, guid: d455eda2a97daa343b79068274b13063, type: 3}
+  - objectivesAreViables: 1
     sceneName: 10
     nbDeath: 0
     objectivesEnemiesArray: []
-    objectivesTimerArray: []
+    objectivesTimerArray:
+    - isEnabled: 1
+      success: 0
+      objectiveDone: 0
+      objectiveString: uki
+      timerLevel: 10
+      timerPlayerScore: 0
     objectiveLevelFinished:
-      isEnabled: 0
+      isEnabled: 1
       success: 0
       objectiveDone: 0
-      objectiveString: 
+      objectiveString: juyt
     objectiveCollectable:
-      isEnabled: 0
+      isEnabled: 1
       success: 0
       objectiveDone: 0
-      objectiveString: 
+      objectiveString: 354
       isCollected: 0
       baseSprite: {fileID: 0}
       baseSpriteColor: {r: 0, g: 0, b: 0, a: 0}
       obtainedSprite: {fileID: 0}
       obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
     hasTutorial: 0
+    tutorialCompleted: 0
     tutorialPrefab: {fileID: 0}
   playerPrefab: {fileID: 6562053868118649450, guid: 95731bcc20d8d574f93d297a8775208d, type: 3}
   sceneIsLoaded:
