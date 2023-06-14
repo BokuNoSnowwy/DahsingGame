@@ -10,6 +10,8 @@ public class LevelsSaver : SaveableBehaviour
 
     private const string LOCAL_LEVELS_KEY = "levelsObjective";
 
+    private const string LOCAL_TUTORIAL_COMPLETE = "levelTutoComplete";
+
     private const string LOCAL_INDEX_KEY = "levelIndex";
     private const string LOCAL_DEATH_KEY = "numberOfDeath";
     private const string LOCAL_COLLECTABLE_KEY = "collectabeDone";
@@ -51,6 +53,7 @@ public class LevelsSaver : SaveableBehaviour
 
                 data[LOCAL_INDEX_KEY] = i;
                 data[LOCAL_DEATH_KEY] = level.nbDeath;
+                data[LOCAL_TUTORIAL_COMPLETE] = level.tutorialCompleted;
                 data[LOCAL_COLLECTABLE_KEY] = level.objectiveCollectable.ObjectiveDone;
                 data[LOCAL_FINISHED_KEY] = level.objectiveLevelFinished.ObjectiveDone;
 
@@ -133,6 +136,10 @@ public class LevelsSaver : SaveableBehaviour
                 if (objectData.ContainsKey(LOCAL_DEATH_KEY))
                 {
                     GameManager.Instance.levelList[levelIndex].nbDeath = (int)objectData[LOCAL_DEATH_KEY];
+                }
+                if (objectData.ContainsKey(LOCAL_TUTORIAL_COMPLETE))
+                {
+                    GameManager.Instance.levelList[levelIndex].tutorialCompleted = (bool)objectData[LOCAL_TUTORIAL_COMPLETE];
                 }
                 if (objectData.ContainsKey(LOCAL_COLLECTABLE_KEY))
                 {
