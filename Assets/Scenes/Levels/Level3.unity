@@ -206,7 +206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2151046103330905462, guid: 1d8c2c3d041b33244a489f208e0eab34, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2151046103330905462, guid: 1d8c2c3d041b33244a489f208e0eab34, type: 3}
       propertyPath: m_AnchorMax.x
@@ -480,7 +480,7 @@ PrefabInstance:
     - target: {fileID: 366957611285556176, guid: 678f7695a8990ff429e340e39b5b97f8, type: 3}
       propertyPath: playerInstanciator
       value: 
-      objectReference: {fileID: 941275603}
+      objectReference: {fileID: 0}
     - target: {fileID: 366957611285556178, guid: 678f7695a8990ff429e340e39b5b97f8, type: 3}
       propertyPath: m_Name
       value: Ghost
@@ -698,7 +698,7 @@ Transform:
   - {fileID: 445520993}
   - {fileID: 840179980}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &771391949
 GameObject:
@@ -27708,60 +27708,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &941275602
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 941275604}
-  - component: {fileID: 941275603}
-  m_Layer: 0
-  m_Name: PlayerInstanciator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &941275603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941275602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c677c5a79d222a145b821e8a9db18abb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolPrefab: {fileID: 6562053868118649450, guid: 95731bcc20d8d574f93d297a8775208d, type: 3}
-  swipePrefab: {fileID: 6220314003077627839, guid: fc700b5b616a99d48ac40a3ce0b94560, type: 3}
-  touchPrefab: {fileID: 5095277136648053427, guid: 6be7261baee1f8f449622e364f5dc308, type: 3}
-  poolButton: {fileID: 0}
-  touchButton: {fileID: 0}
-  swipeButton: {fileID: 0}
-  spawnPosition: {fileID: 0}
-  changePlayerEnvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!4 &941275604
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941275602}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3211708, y: -0.21142292, z: 1617.9669}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1078036539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27858,7 +27804,7 @@ Transform:
   - {fileID: 1895661278}
   - {fileID: 1388442961}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1203245332
 PrefabInstance:
@@ -28201,7 +28147,7 @@ Transform:
   - {fileID: 1078036540}
   - {fileID: 1660675957}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1650845317
 GameObject:
@@ -28238,7 +28184,7 @@ Transform:
   - {fileID: 1212014832}
   - {fileID: 1809766092}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1660675956
 PrefabInstance:
