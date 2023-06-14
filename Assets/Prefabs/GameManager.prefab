@@ -61,7 +61,7 @@ MonoBehaviour:
   indexLevel: 0
   levelList:
   - objectivesAreViables: 1
-    sceneName: 0
+    sceneName: 10
     nbDeath: 0
     objectivesEnemiesArray:
     - isEnabled: 1
