@@ -6,6 +6,8 @@ using System;
 
 public class LevelsSaver : SaveableBehaviour
 {
+    private const string LOCAL_LEVELS_UNLOCK = "levelsUnlock";
+
     private const string LOCAL_LEVELS_KEY = "levelsObjective";
 
     private const string LOCAL_INDEX_KEY = "levelIndex";
@@ -37,6 +39,8 @@ public class LevelsSaver : SaveableBehaviour
         get
         {
             var result = new JsonData();
+
+            result[LOCAL_LEVELS_UNLOCK] = GameManager.Instance.lvlUnlock;
 
             var levelsObjective = new JsonData();
 
@@ -106,6 +110,11 @@ public class LevelsSaver : SaveableBehaviour
 
     public override void LoadFromData(JsonData data)
     {
+        if (data.ContainsKey(LOCAL_LEVELS_UNLOCK))
+        {
+            GameManager.Instance.lvlUnlock = (int)data[LOCAL_LEVELS_UNLOCK];
+        }
+
         if (data.ContainsKey(LOCAL_LEVELS_KEY))
         {
             var objects = data[LOCAL_LEVELS_KEY];
