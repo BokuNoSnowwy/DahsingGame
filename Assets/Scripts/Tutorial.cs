@@ -39,6 +39,7 @@ public class Tutorial : MonoBehaviour
 
     public void Close()
     {
+        GameManager.Instance.GetActualLevel().tutorialCompleted = true;
         gameObject.SetActive(false);
         GameManager.Instance.isInTuto = false;
     }

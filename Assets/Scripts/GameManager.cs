@@ -194,7 +194,7 @@ public class GameManager : MonoBehaviour
         SpawnPlayer();
 
         Level myLevel = GetActualLevel();
-        if (myLevel.hasTutorial)
+        if (myLevel.hasTutorial && !myLevel.tutorialCompleted)
         {
             isInTuto = true;
             Instantiate(myLevel.tutorialPrefab);
