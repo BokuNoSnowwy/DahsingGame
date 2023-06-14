@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool isPaused;
     public bool isInTuto;
 
+    public int lvlUnlock;
+
     private void Awake()
     {
         if(Instance == null)
@@ -134,6 +136,9 @@ public class GameManager : MonoBehaviour
         rippleEffect.enabled = false;
         gameLevelPanel.DisplayPanel();
         playerMovement.rb.gravityScale = playerMovement.gravity;
+
+        if(lvlUnlock >= levelList.IndexOf(GetActualLevel()))
+            lvlUnlock = levelList.IndexOf(GetActualLevel()) + 1;
     }
 
     public void ReturnToLobby()
