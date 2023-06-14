@@ -16561,7 +16561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3510239083905858525, guid: 903edf0c6462d694b99d8d6faf0cf259, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3510239083905858525, guid: 903edf0c6462d694b99d8d6faf0cf259, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24004,6 +24004,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340601507}
   m_CullTransparentMesh: 0
+--- !u!1001 &354780437
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5282891179104282432, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282432, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.3211708
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282432, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.21142292
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282432, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1617.9669
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282432, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282432, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282432, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282432, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282432, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282432, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282432, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282434, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 92663882325b6534689bc8214776d3e6, type: 3}
 --- !u!1 &366582456
 GameObject:
   m_ObjectHideFlags: 0
@@ -58715,7 +58772,7 @@ RectTransform:
   - {fileID: 1297575203}
   - {fileID: 1193831652}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -73475,7 +73532,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1293004871
 MonoBehaviour:
@@ -98889,255 +98946,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1662597572
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1662597574}
-  - component: {fileID: 1662597573}
-  - component: {fileID: 1662597575}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1662597573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662597572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2cc388d3697f24395fd7d8ab41f286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelSelectorSceneName: JuMenu
-  collectableEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  enemiesEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  levelFinishedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  playerRespawnEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  indexLevel: 0
-  levelList:
-  - objectivesAreViables: 1
-    sceneName: 0
-    nbDeath: 0
-    objectivesEnemiesArray:
-    - isEnabled: 1
-      success: 0
-      objectiveDone: 0
-      objectiveString: Defeat all the enemies
-      enemiesCount: 0
-      enemiesCountGoal: 2
-    objectivesTimerArray:
-    - isEnabled: 0
-      success: 0
-      objectiveDone: 0
-      objectiveString: Finish level in less than 10 seconds
-      timerLevel: 10
-      timerPlayerScore: 0
-    - isEnabled: 1
-      success: 0
-      objectiveDone: 0
-      objectiveString: Finish level in less than 5 seconds
-      timerLevel: 5
-      timerPlayerScore: 0
-    objectiveLevelFinished:
-      isEnabled: 0
-      success: 0
-      objectiveDone: 0
-      objectiveString: Finish the level
-    objectiveCollectable:
-      isEnabled: 1
-      success: 0
-      objectiveDone: 0
-      objectiveString: Collect the item
-      isCollected: 0
-      baseSprite: {fileID: 21300000, guid: 216c53aef79eaaf40a1800cc5e542dc3, type: 3}
-      baseSpriteColor: {r: 1, g: 1, b: 1, a: 1}
-      obtainedSprite: {fileID: 21300000, guid: 216c53aef79eaaf40a1800cc5e542dc3, type: 3}
-      obtainedSpriteColor: {r: 1, g: 1, b: 1, a: 0.14901961}
-    hasTutorial: 1
-    tutorialPrefab: {fileID: 444784056341609641, guid: fef0deec4e62beb438627c85d51addc5, type: 3}
-  - objectivesAreViables: 1
-    sceneName: 1
-    nbDeath: 0
-    objectivesEnemiesArray:
-    - isEnabled: 1
-      success: 0
-      objectiveDone: 0
-      objectiveString: d
-      enemiesCount: 0
-      enemiesCountGoal: 2
-    objectivesTimerArray:
-    - isEnabled: 1
-      success: 0
-      objectiveDone: 0
-      objectiveString: 
-      timerLevel: 10
-      timerPlayerScore: 0
-    - isEnabled: 1
-      success: 0
-      objectiveDone: 0
-      objectiveString: 
-      timerLevel: 5
-      timerPlayerScore: 0
-    objectiveLevelFinished:
-      isEnabled: 0
-      success: 0
-      objectiveDone: 0
-      objectiveString: 
-    objectiveCollectable:
-      isEnabled: 0
-      success: 0
-      objectiveDone: 0
-      objectiveString: 
-      isCollected: 0
-      baseSprite: {fileID: 0}
-      baseSpriteColor: {r: 0, g: 0, b: 0, a: 0}
-      obtainedSprite: {fileID: 0}
-      obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
-    hasTutorial: 0
-    tutorialPrefab: {fileID: 0}
-  - objectivesAreViables: 0
-    sceneName: 2
-    nbDeath: 0
-    objectivesEnemiesArray: []
-    objectivesTimerArray: []
-    objectiveLevelFinished:
-      isEnabled: 0
-      success: 0
-      objectiveDone: 0
-      objectiveString: 
-    objectiveCollectable:
-      isEnabled: 0
-      success: 0
-      objectiveDone: 0
-      objectiveString: 
-      isCollected: 0
-      baseSprite: {fileID: 0}
-      baseSpriteColor: {r: 0, g: 0, b: 0, a: 0}
-      obtainedSprite: {fileID: 0}
-      obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
-    hasTutorial: 0
-    tutorialPrefab: {fileID: 0}
-  - objectivesAreViables: 0
-    sceneName: 3
-    nbDeath: 0
-    objectivesEnemiesArray: []
-    objectivesTimerArray: []
-    objectiveLevelFinished:
-      isEnabled: 0
-      success: 0
-      objectiveDone: 0
-      objectiveString: 
-    objectiveCollectable:
-      isEnabled: 0
-      success: 0
-      objectiveDone: 0
-      objectiveString: 
-      isCollected: 0
-      baseSprite: {fileID: 0}
-      baseSpriteColor: {r: 0, g: 0, b: 0, a: 0}
-      obtainedSprite: {fileID: 0}
-      obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
-    hasTutorial: 0
-    tutorialPrefab: {fileID: 0}
-  - objectivesAreViables: 0
-    sceneName: 4
-    nbDeath: 0
-    objectivesEnemiesArray: []
-    objectivesTimerArray: []
-    objectiveLevelFinished:
-      isEnabled: 0
-      success: 0
-      objectiveDone: 0
-      objectiveString: 
-    objectiveCollectable:
-      isEnabled: 0
-      success: 0
-      objectiveDone: 0
-      objectiveString: 
-      isCollected: 0
-      baseSprite: {fileID: 0}
-      baseSpriteColor: {r: 0, g: 0, b: 0, a: 0}
-      obtainedSprite: {fileID: 0}
-      obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
-    hasTutorial: 0
-    tutorialPrefab: {fileID: 0}
-  - objectivesAreViables: 0
-    sceneName: 5
-    nbDeath: 0
-    objectivesEnemiesArray: []
-    objectivesTimerArray: []
-    objectiveLevelFinished:
-      isEnabled: 0
-      success: 0
-      objectiveDone: 0
-      objectiveString: 
-    objectiveCollectable:
-      isEnabled: 0
-      success: 0
-      objectiveDone: 0
-      objectiveString: 
-      isCollected: 0
-      baseSprite: {fileID: 0}
-      baseSpriteColor: {r: 0, g: 0, b: 0, a: 0}
-      obtainedSprite: {fileID: 0}
-      obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
-    hasTutorial: 0
-    tutorialPrefab: {fileID: 0}
-  playerPrefab: {fileID: 6562053868118649450, guid: 95731bcc20d8d574f93d297a8775208d, type: 3}
-  sceneIsLoaded:
-    m_PersistentCalls:
-      m_Calls: []
-  isInGame: 0
-  isPaused: 0
-  isInTuto: 0
-  lvlUnlock: 0
---- !u!4 &1662597574
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662597572}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3211708, y: -0.21142292, z: 1617.9669}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1662597575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662597572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8e75d82cc5d22a42bdc6c03828f9a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _saveID: GameManager-535b4187-4d45-44a0-8085-b11329ae5112
 --- !u!1 &1671092015
 GameObject:
   m_ObjectHideFlags: 0

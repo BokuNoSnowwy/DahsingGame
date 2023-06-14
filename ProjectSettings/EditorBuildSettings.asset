@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/JuMenu.unity
     guid: 1d7a71db3f2984749bf5930e66ffdd33
   - enabled: 1
-    path: Assets/Scenes/Levels/Level1.unity
-    guid: c9e8bc84cb9d5144c9a3dc635e926e69
+    path: Assets/Scenes/Levels/Ju/Level1.unity
+    guid: c14be8250f348ed4e96acadd59c6ced2
   - enabled: 1
     path: Assets/Scenes/Levels/Level2.unity
     guid: 5bf2d9e6c3e5f98409b015c529eb7294
