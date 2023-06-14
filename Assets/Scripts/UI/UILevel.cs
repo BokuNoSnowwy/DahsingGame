@@ -8,4 +8,9 @@ public class UILevel : MonoBehaviour
     {
         GameManager.Instance.RespawnPlayer();
     }
+
+    public void BackHome()
+    {
+        GameManager.Instance.ReturnToLobby();
+    }
 }

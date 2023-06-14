@@ -31,7 +31,9 @@ public class InGameLevelPanel : LevelPanel
     {
         List<Objective> listObjectives = gameManager.GetActualLevel().GetObjectives();
         
-        textTitle.text = "Level " + gameManager.GetActualLevel().sceneName + " Finished !";
+        textTitle.text = /*"Level " +*/ gameManager.GetActualLevel().sceneName + " Finished !";
+        textTitle.rectTransform.anchorMax = new Vector2(.5f, .5f);
+        textTitle.rectTransform.anchorMin = new Vector2(.5f, .5f);
 
         for (int i = 0; i < listObjectives.Count; i++)
         {
