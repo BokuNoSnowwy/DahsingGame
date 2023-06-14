@@ -12,11 +12,13 @@ public class OptionMenu : MonoBehaviour
     public void SetSoundLevel(float sliderValue)
     {
         soundMixer.SetFloat("Sound", Mathf.Log10(sliderValue) * 20);
+        SavingService.SaveGame("Settings.json");
     }
 
     public void SetMusicLevel(float sliderValue)
     {
         musicMixer.SetFloat("Music", Mathf.Log10(sliderValue) * 20);
+        SavingService.SaveGame("Settings.json");
     }
 
     private void OnEnable()

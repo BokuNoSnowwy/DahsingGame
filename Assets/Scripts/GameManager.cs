@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         SavingService.LoadGame("LevelsData.json");
+        SavingService.LoadGame("Settings.json");
     }
 
     void Update()
