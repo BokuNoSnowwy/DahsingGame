@@ -15,7 +15,8 @@ public enum SceneName
     LevelABCD,
     LevelABCDE,
     LevelD,
-    LevelF
+    LevelF,
+    LevelABCDEF
 }
 
 [Serializable]

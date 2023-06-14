@@ -204,10 +204,120 @@ MonoBehaviour:
       baseSpriteColor: {r: 0, g: 0, b: 0, a: 0}
       obtainedSprite: {fileID: 0}
       obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
+    hasTutorial: 1
+    tutorialPrefab: {fileID: 444784056341609641, guid: 3da9886fced0c314188bfd08bfd94e16, type: 3}
+  - objectivesAreViables: 0
+    sceneName: 5
+    nbDeath: 0
+    objectivesEnemiesArray: []
+    objectivesTimerArray: []
+    objectiveLevelFinished:
+      isEnabled: 0
+      success: 0
+      objectiveDone: 0
+      objectiveString: 
+    objectiveCollectable:
+      isEnabled: 0
+      success: 0
+      objectiveDone: 0
+      objectiveString: 
+      isCollected: 0
+      baseSprite: {fileID: 0}
+      baseSpriteColor: {r: 0, g: 0, b: 0, a: 0}
+      obtainedSprite: {fileID: 0}
+      obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
     hasTutorial: 0
     tutorialPrefab: {fileID: 0}
   - objectivesAreViables: 0
-    sceneName: 5
+    sceneName: 8
+    nbDeath: 0
+    objectivesEnemiesArray: []
+    objectivesTimerArray: []
+    objectiveLevelFinished:
+      isEnabled: 0
+      success: 0
+      objectiveDone: 0
+      objectiveString: 
+    objectiveCollectable:
+      isEnabled: 0
+      success: 0
+      objectiveDone: 0
+      objectiveString: 
+      isCollected: 0
+      baseSprite: {fileID: 0}
+      baseSpriteColor: {r: 0, g: 0, b: 0, a: 0}
+      obtainedSprite: {fileID: 0}
+      obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
+    hasTutorial: 1
+    tutorialPrefab: {fileID: 444784056341609641, guid: 1d01120c1f0f05640a8f1a2aea331fad, type: 3}
+  - objectivesAreViables: 0
+    sceneName: 6
+    nbDeath: 0
+    objectivesEnemiesArray: []
+    objectivesTimerArray: []
+    objectiveLevelFinished:
+      isEnabled: 0
+      success: 0
+      objectiveDone: 0
+      objectiveString: 
+    objectiveCollectable:
+      isEnabled: 0
+      success: 0
+      objectiveDone: 0
+      objectiveString: 
+      isCollected: 0
+      baseSprite: {fileID: 0}
+      baseSpriteColor: {r: 0, g: 0, b: 0, a: 0}
+      obtainedSprite: {fileID: 0}
+      obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
+    hasTutorial: 0
+    tutorialPrefab: {fileID: 0}
+  - objectivesAreViables: 0
+    sceneName: 7
+    nbDeath: 0
+    objectivesEnemiesArray: []
+    objectivesTimerArray: []
+    objectiveLevelFinished:
+      isEnabled: 0
+      success: 0
+      objectiveDone: 0
+      objectiveString: 
+    objectiveCollectable:
+      isEnabled: 0
+      success: 0
+      objectiveDone: 0
+      objectiveString: 
+      isCollected: 0
+      baseSprite: {fileID: 0}
+      baseSpriteColor: {r: 0, g: 0, b: 0, a: 0}
+      obtainedSprite: {fileID: 0}
+      obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
+    hasTutorial: 0
+    tutorialPrefab: {fileID: 0}
+  - objectivesAreViables: 0
+    sceneName: 9
+    nbDeath: 0
+    objectivesEnemiesArray: []
+    objectivesTimerArray: []
+    objectiveLevelFinished:
+      isEnabled: 0
+      success: 0
+      objectiveDone: 0
+      objectiveString: 
+    objectiveCollectable:
+      isEnabled: 0
+      success: 0
+      objectiveDone: 0
+      objectiveString: 
+      isCollected: 0
+      baseSprite: {fileID: 0}
+      baseSpriteColor: {r: 0, g: 0, b: 0, a: 0}
+      obtainedSprite: {fileID: 0}
+      obtainedSpriteColor: {r: 0, g: 0, b: 0, a: 0}
+    hasTutorial: 1
+    tutorialPrefab: {fileID: 444784056341609641, guid: 911a8958dbb707a48a1e2cbac32c56ed, type: 3}
+  - objectivesAreViables: 0
+    sceneName: 10
     nbDeath: 0
     objectivesEnemiesArray: []
     objectivesTimerArray: []
