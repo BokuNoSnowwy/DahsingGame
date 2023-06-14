@@ -378,24 +378,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  speed: 7
-  jumpForce: 12
-  slideSpeed: 1
-  wallJumpLerp: 5
   dashSpeed: 30
   gravity: 0.5
   dashDistanceMax: 6
   canMove: 1
-  wallGrab: 0
-  wallJumped: 0
-  wallSlide: 0
-  wallSlideTimerBeforeFall: 3
-  resetWallSlideTimerBeforeFall: 10
   isDashing: 0
   noGravity: 0
-  groundTouch: 0
   hasDashed: 0
-  side: 1
   dashParticle: {fileID: 6562053868624596564}
   jumpParticle: {fileID: 6562053868564145107}
   wallJumpParticle: {fileID: 6562053868346348209}
@@ -405,6 +394,7 @@ MonoBehaviour:
       m_Calls: []
   rightRay: {fileID: 3038946899367533005}
   leftRay: {fileID: 3010375302119538437}
+  poolPower: 2.2
 --- !u!114 &-3744903961497850048
 MonoBehaviour:
   m_ObjectHideFlags: 0
