@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour, IInteractable
     //Kill enemy
     protected virtual void Die()
     {
+        AudioManager.instance.Play("EnemyDie");
         col.enabled = false;
         rend.enabled = false;
         GameManager.Instance.enemiesEvent.Invoke();
@@ -50,6 +51,7 @@ public class Enemy : MonoBehaviour, IInteractable
         if (playerMovement.isDashing)
         {
             life--;
+            AudioManager.instance.Play("EnemyHit");
             if (life <= 0)
             {
                 Die();

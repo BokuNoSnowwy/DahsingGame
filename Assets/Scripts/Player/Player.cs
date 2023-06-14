@@ -11,12 +11,15 @@ public class Player : MonoBehaviour
     [SerializeField] 
     private Movement movementScript;
 
+    Transform camPos;
+
     [HideInInspector] public UnityEvent firstDashRespawn;
     [HideInInspector] public UnityEvent playerDie;
     
     void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        camPos = Camera.main.transform;
     }
 
     public void Initialization()
@@ -32,8 +35,9 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (!spriteRenderer.isVisible && isAlive)
+        if (!spriteRenderer.isVisible && isAlive && transform.position.y < camPos.position.y)
         {
+            Debug.LogWarning("out of camera");
             Die();
         }
     }
@@ -41,6 +45,8 @@ public class Player : MonoBehaviour
     [ContextMenu("Player Die")]
     public void Die()
     {
+        AudioManager.instance.Play("PlayerDie");
+        movementScript.EndDash();
         isAlive = false;
         //Disable the player before respawning to make sure the player won't do unnecessary moves  
         //gameObject.SetActive(false);
