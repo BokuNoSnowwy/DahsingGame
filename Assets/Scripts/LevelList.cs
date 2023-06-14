@@ -14,5 +14,12 @@ public class LevelList : MonoBehaviour
             if (i != 0)
                 levelContents.transform.GetChild(i).transform.GetChild(5).gameObject.SetActive(false);
         }
+        for (int i = 0; i < GameManager.Instance.levelList.Count; i++)
+        {
+            if (!GameManager.Instance.levelList[i].hasTutorial)
+            {
+                levelContents.transform.GetChild(i).transform.GetChild(6).gameObject.SetActive(false);
+            }
+        }
     }
 }
