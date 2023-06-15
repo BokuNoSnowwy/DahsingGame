@@ -14,6 +14,20 @@ public class Tutorial : MonoBehaviour
 
     [SerializeField] private Color circleColorOn, circleColorOff;
 
+    [Header("Swipe")]
+    public float maxRangeSwipe = 250f;
+
+    private Vector2 fingerDown;
+    private Vector2 fingerUp;
+    public bool detectSwipeOnlyAfterRelease = false;
+
+    bool canSwipe = true;
+
+    private void Update()
+    {
+        DoSwipe();
+    }
+
     public void Switch(bool isLeft)
     {
         arrowLeft.SetActive(true);
@@ -42,5 +56,58 @@ public class Tutorial : MonoBehaviour
         GameManager.Instance.GetActualLevel().tutorialCompleted = true;
         gameObject.SetActive(false);
         GameManager.Instance.isInTuto = false;
+    }
+
+    void DoSwipe()
+    {
+        foreach (Touch touch in Input.touches)
+        {
+            if (touch.phase == TouchPhase.Began)
+            {
+                fingerUp = touch.position;
+                fingerDown = touch.position;
+            }
+
+            if (touch.phase == TouchPhase.Moved)
+            {
+                if (!detectSwipeOnlyAfterRelease)
+                {
+                    fingerDown = touch.position;
+                    CheckSwipe();
+                }
+            }
+
+            if (touch.phase == TouchPhase.Ended)
+            {
+                fingerDown = touch.position;
+                CheckSwipe();
+                canSwipe = true;
+            }
+        }
+    }
+
+    void CheckSwipe()
+    {
+        if (Mathf.Abs(fingerDown.x - fingerUp.x) > maxRangeSwipe && Mathf.Abs(fingerDown.x - fingerUp.x) > Mathf.Abs(fingerDown.y - fingerUp.y) && canSwipe)
+        {
+            if (fingerDown.x - fingerUp.x > 0)
+            {
+                if (currentInstruction > 0)
+                {
+                    Switch(true);
+                    canSwipe = false;
+                }
+
+            }
+            else if (fingerDown.x - fingerUp.x < 0)
+            {
+                if (currentInstruction < instructions.Length - 1)
+                {
+                    Switch(false);
+                    canSwipe = false;
+                }
+            }
+            fingerUp = fingerDown;
+        }
     }
 }

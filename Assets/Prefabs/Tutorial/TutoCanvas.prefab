@@ -202,6 +202,8 @@ MonoBehaviour:
   arrowRight: {fileID: 444784056542586923}
   circleColorOn: {r: 0.74509805, g: 0.74509805, b: 0.74509805, a: 1}
   circleColorOff: {r: 0.23529412, g: 0.23529412, b: 0.23921569, a: 1}
+  SWIPE_THRESHOLD: 250
+  detectSwipeOnlyAfterRelease: 0
 --- !u!1 &444784056405780126
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,7 +854,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 70.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
