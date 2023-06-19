@@ -24192,6 +24192,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[0].objectiveCollectable.baseSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[10].objectiveCollectable.isEnabled
       value: 1
       objectReference: {fileID: 0}
@@ -24207,6 +24211,10 @@ PrefabInstance:
       propertyPath: levelList.Array.data[10].objectiveLevelFinished.isEnabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[0].objectiveCollectable.obtainedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[10].objectiveCollectable.objectiveString
       value: 354
