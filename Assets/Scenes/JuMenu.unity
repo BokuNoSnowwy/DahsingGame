@@ -24180,6 +24180,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].hasTutorial
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].tutorialPrefab
+      value: 
+      objectReference: {fileID: 444784056341609641, guid: c4aa0e26e40d3f945994c3f71592e1af, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[0].objectivesAreViables
       value: 1
       objectReference: {fileID: 0}
