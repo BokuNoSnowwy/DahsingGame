@@ -39,5 +39,10 @@ public class InGameLevelPanel : LevelPanel
         {
             objectivesArray[i].sprite = listObjectives[i].Success ? spriteObjectiveDone : spriteObjectiveNotAchieved;
         }
+
+        for (int i = 0; i < textObjectivesArray.Length; i++)
+        {
+            textObjectivesArray[i].text = listObjectives[i].ObjectiveString;
+        }
     }
 }

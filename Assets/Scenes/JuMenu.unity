@@ -24180,11 +24180,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[0].objectivesAreViables
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[10].objectivesAreViables
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[0].objectiveCollectable.isEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[10].objectiveCollectable.isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[0].objectiveLevelFinished.isEnabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
@@ -24204,12 +24216,36 @@ PrefabInstance:
       value: juyt
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[0].objectivesTimerArray.Array.data[0].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[0].objectivesTimerArray.Array.data[0].timerLevel
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[0].objectivesTimerArray.Array.data[1].timerLevel
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[10].objectivesTimerArray.Array.data[0].isEnabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[0].objectivesEnemiesArray.Array.data[0].isEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[10].objectivesTimerArray.Array.data[0].timerLevel
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[0].objectivesTimerArray.Array.data[0].objectiveString
+      value: Finish level in less than 4 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[0].objectivesTimerArray.Array.data[1].objectiveString
+      value: Finish level in less than 7 seconds
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[10].objectivesTimerArray.Array.data[0].objectiveString
