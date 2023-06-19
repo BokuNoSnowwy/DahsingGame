@@ -21,13 +21,8 @@ public class FinishingLineInteractable : MonoBehaviour, IInteractable
     public void DetectPlayer(Movement playerMovement = null)
     {
         StartCoroutine(GameManager.Instance.EndLevel());
-    }
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.CompareTag("Player") && !playerHasFinished)
+        if (!playerHasFinished)
         {
-            DetectPlayer();
             playerHasFinished = true;
         }
     }

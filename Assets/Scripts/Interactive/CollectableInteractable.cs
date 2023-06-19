@@ -34,20 +34,14 @@ public class CollectableInteractable : MonoBehaviour, IInteractable
         spriteRenderer.color = gameLevel.objectiveCollectable.ObjectiveDone? gameLevel.objectiveCollectable.ObtainedSpriteColor : gameLevel.objectiveCollectable.BaseSpriteColor;
     }
 
-    public void DetectPlayer(Movement playerMovement = null)
+    public void DetectPlayer(Movement playerMovement)
     {
         Debug.LogError("DetectPlayer");
+        playerMovement.hasDashed = false;
         spriteRenderer.sprite = GameManager.Instance.GetActualLevel().objectiveCollectable.ObtainedSprite;
         spriteRenderer.color = GameManager.Instance.GetActualLevel().objectiveCollectable.ObtainedSpriteColor;
         GameManager.Instance.collectableEvent.Invoke();
-    }
-
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.CompareTag("Player"))
-        {
-            DetectPlayer();
-        }
+        
     }
     
     public Vector2 iniPos { get; set; }
