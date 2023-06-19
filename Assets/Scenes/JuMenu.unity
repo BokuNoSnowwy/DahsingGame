@@ -24184,12 +24184,76 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[1].objectivesAreViables
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[2].objectivesAreViables
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectivesAreViables
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectivesAreViables
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectivesAreViables
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectivesAreViables
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectivesAreViables
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectivesAreViables
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectivesAreViables
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[10].objectivesAreViables
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[0].objectiveCollectable.isEnabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectiveCollectable.isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectiveCollectable.isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectiveCollectable.isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectiveCollectable.isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectiveCollectable.isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectiveCollectable.isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectiveCollectable.isEnabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[0].objectiveCollectable.baseSprite
@@ -24200,15 +24264,115 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[2].objectivesTimerArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectiveCollectable.baseSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectivesTimerArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectiveCollectable.baseSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectivesTimerArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectiveCollectable.baseSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectivesTimerArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectiveCollectable.baseSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectivesTimerArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectiveCollectable.baseSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectivesTimerArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectiveCollectable.baseSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectivesTimerArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectiveCollectable.baseSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectivesTimerArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[0].objectiveLevelFinished.isEnabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[10].objectiveCollectable.baseSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[10].objectivesTimerArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[1].objectiveLevelFinished.isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[2].objectiveLevelFinished.isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectiveLevelFinished.isEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectiveLevelFinished.isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectiveLevelFinished.isEnabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[10].objectiveLevelFinished.isEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[2].objectivesEnemiesArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectivesEnemiesArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectivesEnemiesArray.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectivesEnemiesArray.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
@@ -24216,15 +24380,399 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectiveCollectable.obtainedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectiveCollectable.obtainedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectiveCollectable.obtainedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectiveCollectable.obtainedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectiveCollectable.obtainedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectiveCollectable.obtainedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectiveCollectable.obtainedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[10].objectiveCollectable.obtainedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44398580adeed82458886e83893f369f, type: 3}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectiveCollectable.objectiveString
+      value: Collect the item
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectiveCollectable.objectiveString
+      value: Collect the item
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectiveCollectable.objectiveString
+      value: Collect the item
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectiveCollectable.objectiveString
+      value: Collect the item
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectiveCollectable.objectiveString
+      value: Collect the item
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectiveCollectable.objectiveString
+      value: Collect the item
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectiveCollectable.objectiveString
+      value: Collect the item
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[10].objectiveCollectable.objectiveString
-      value: 354
+      value: Collect the item
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[1].objectiveLevelFinished.objectiveString
+      value: Finish the level
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[2].objectiveLevelFinished.objectiveString
+      value: Finish the level
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectiveCollectable.baseSpriteColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectiveCollectable.baseSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectiveCollectable.baseSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectiveCollectable.baseSpriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectiveLevelFinished.objectiveString
+      value: Finish the level
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectiveCollectable.baseSpriteColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectiveCollectable.baseSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectiveCollectable.baseSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectiveCollectable.baseSpriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectiveLevelFinished.objectiveString
+      value: Finish the level
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectiveCollectable.baseSpriteColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectiveCollectable.baseSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectiveCollectable.baseSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectiveCollectable.baseSpriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectiveCollectable.baseSpriteColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectiveCollectable.baseSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectiveCollectable.baseSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectiveCollectable.baseSpriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectiveCollectable.baseSpriteColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectiveCollectable.baseSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectiveCollectable.baseSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectiveCollectable.baseSpriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectiveCollectable.baseSpriteColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectiveCollectable.baseSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectiveCollectable.baseSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectiveCollectable.baseSpriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectiveCollectable.baseSpriteColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectiveCollectable.baseSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectiveCollectable.baseSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectiveCollectable.baseSpriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectiveLevelFinished.objectiveString
+      value: Finish the level
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[10].objectiveCollectable.baseSpriteColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[10].objectiveCollectable.baseSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[10].objectiveCollectable.baseSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[10].objectiveCollectable.baseSpriteColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[10].objectiveLevelFinished.objectiveString
-      value: juyt
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectiveCollectable.obtainedSpriteColor.a
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectiveCollectable.obtainedSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectiveCollectable.obtainedSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectiveCollectable.obtainedSpriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectiveCollectable.obtainedSpriteColor.a
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectiveCollectable.obtainedSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectiveCollectable.obtainedSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectiveCollectable.obtainedSpriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectiveCollectable.obtainedSpriteColor.a
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectiveCollectable.obtainedSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectiveCollectable.obtainedSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectiveCollectable.obtainedSpriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectiveCollectable.obtainedSpriteColor.a
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectiveCollectable.obtainedSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectiveCollectable.obtainedSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectiveCollectable.obtainedSpriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectiveCollectable.obtainedSpriteColor.a
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectiveCollectable.obtainedSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectiveCollectable.obtainedSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectiveCollectable.obtainedSpriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectiveCollectable.obtainedSpriteColor.a
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectiveCollectable.obtainedSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectiveCollectable.obtainedSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectiveCollectable.obtainedSpriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectiveCollectable.obtainedSpriteColor.a
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectiveCollectable.obtainedSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectiveCollectable.obtainedSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectiveCollectable.obtainedSpriteColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[10].objectiveCollectable.obtainedSpriteColor.a
+      value: 0.14901961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[10].objectiveCollectable.obtainedSpriteColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[10].objectiveCollectable.obtainedSpriteColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[10].objectiveCollectable.obtainedSpriteColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[0].objectivesTimerArray.Array.data[0].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[1].objectivesTimerArray.Array.data[1].isEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[2].objectivesTimerArray.Array.data[0].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[2].objectivesTimerArray.Array.data[1].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectivesTimerArray.Array.data[0].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectivesTimerArray.Array.data[0].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectivesTimerArray.Array.data[0].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectivesTimerArray.Array.data[0].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectivesTimerArray.Array.data[1].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectivesTimerArray.Array.data[0].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectivesTimerArray.Array.data[1].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectivesTimerArray.Array.data[0].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectivesTimerArray.Array.data[0].isEnabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
@@ -24240,12 +24788,88 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[10].objectivesTimerArray.Array.data[1].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[1].objectivesTimerArray.Array.data[0].timerLevel
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[2].objectivesTimerArray.Array.data[0].timerLevel
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[2].objectivesTimerArray.Array.data[1].timerLevel
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectivesTimerArray.Array.data[0].timerLevel
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectivesTimerArray.Array.data[0].timerLevel
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectivesTimerArray.Array.data[0].timerLevel
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectivesTimerArray.Array.data[0].timerLevel
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectivesTimerArray.Array.data[1].timerLevel
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectivesTimerArray.Array.data[0].timerLevel
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectivesTimerArray.Array.data[1].timerLevel
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectivesTimerArray.Array.data[0].timerLevel
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectivesTimerArray.Array.data[0].timerLevel
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[0].objectivesEnemiesArray.Array.data[0].isEnabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[10].objectivesTimerArray.Array.data[0].timerLevel
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[10].objectivesTimerArray.Array.data[1].timerLevel
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[2].objectivesEnemiesArray.Array.data[0].isEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectivesEnemiesArray.Array.data[0].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectivesEnemiesArray.Array.data[1].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectivesEnemiesArray.Array.data[0].isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectivesEnemiesArray.Array.data[0].isEnabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[0].objectivesTimerArray.Array.data[0].objectiveString
@@ -24256,8 +24880,112 @@ PrefabInstance:
       value: Finish level in less than 7 seconds
       objectReference: {fileID: 0}
     - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[1].objectivesTimerArray.Array.data[0].objectiveString
+      value: Finish level in less than 7 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[1].objectivesTimerArray.Array.data[1].objectiveString
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[2].objectivesTimerArray.Array.data[0].objectiveString
+      value: Finish level in less than 10 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[2].objectivesTimerArray.Array.data[1].objectiveString
+      value: Finish level in less than 7 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectivesTimerArray.Array.data[0].objectiveString
+      value: Finish level in less than 10 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[4].objectivesTimerArray.Array.data[0].objectiveString
+      value: Finish level in less than 12 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectivesTimerArray.Array.data[0].objectiveString
+      value: Finish level in less than 12 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectivesTimerArray.Array.data[0].objectiveString
+      value: Finish level in less than 12 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[6].objectivesTimerArray.Array.data[1].objectiveString
+      value: Finish level in less than 8 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectivesTimerArray.Array.data[0].objectiveString
+      value: Finish level in less than 6 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[7].objectivesTimerArray.Array.data[1].objectiveString
+      value: Finish level in less than 4 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectivesTimerArray.Array.data[0].objectiveString
+      value: Finish level in less than 6 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[9].objectivesTimerArray.Array.data[0].objectiveString
+      value: Finish level in less than 5 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
       propertyPath: levelList.Array.data[10].objectivesTimerArray.Array.data[0].objectiveString
-      value: uki
+      value: Finish level in less than 15 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[10].objectivesTimerArray.Array.data[1].objectiveString
+      value: Finish level in less than 10 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[1].objectivesEnemiesArray.Array.data[0].objectiveString
+      value: Kill 4 enemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[2].objectivesEnemiesArray.Array.data[0].objectiveString
+      value: Kill 6 enemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectivesEnemiesArray.Array.data[0].objectiveString
+      value: Kill 5 enemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectivesEnemiesArray.Array.data[1].objectiveString
+      value: Kill 6 enemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectivesEnemiesArray.Array.data[0].objectiveString
+      value: Kill 4 enemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectivesEnemiesArray.Array.data[0].objectiveString
+      value: Kill 2 enemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[1].objectivesEnemiesArray.Array.data[0].enemiesCountGoal
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[2].objectivesEnemiesArray.Array.data[0].enemiesCountGoal
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectivesEnemiesArray.Array.data[0].enemiesCountGoal
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[3].objectivesEnemiesArray.Array.data[1].enemiesCountGoal
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[5].objectivesEnemiesArray.Array.data[0].enemiesCountGoal
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282891179104282435, guid: 92663882325b6534689bc8214776d3e6, type: 3}
+      propertyPath: levelList.Array.data[8].objectivesEnemiesArray.Array.data[0].enemiesCountGoal
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92663882325b6534689bc8214776d3e6, type: 3}
