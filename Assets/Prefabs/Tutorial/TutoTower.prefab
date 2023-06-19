@@ -200,6 +200,8 @@ MonoBehaviour:
   arrowRight: {fileID: 444784056542586923}
   circleColorOn: {r: 0.74509805, g: 0.74509805, b: 0.74509805, a: 1}
   circleColorOff: {r: 0.23529412, g: 0.23529412, b: 0.23921569, a: 1}
+  maxRangeSwipe: 250
+  detectSwipeOnlyAfterRelease: 0
 --- !u!1 &444784056405780126
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,8 +268,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7803171745462721284, guid: 743fc551622034093a11efcbcb9d49fc, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 2950b1c5e7d4f0849a4d59b1634a62ef, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1027,8 +1029,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7803171745462721284, guid: 743fc551622034093a11efcbcb9d49fc, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 75257d35d76335e4e85d797c202891b7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
