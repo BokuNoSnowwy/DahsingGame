@@ -39,6 +39,7 @@ public class TrapMoving : Trap
 
     private void StartTrap()
     {
+        ResetInteractable();
         StartCoroutine(Moving());
     }
 
