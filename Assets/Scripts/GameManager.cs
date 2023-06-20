@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
         gameLevelPanel.DisplayPanel();
         playerMovement.rb.gravityScale = playerMovement.gravity;
 
-        if(lvlUnlock >= levelList.IndexOf(GetActualLevel()))
+        if(lvlUnlock == levelList.IndexOf(GetActualLevel()))
             lvlUnlock = levelList.IndexOf(GetActualLevel()) + 1;
     }
 
