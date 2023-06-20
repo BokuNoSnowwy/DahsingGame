@@ -216,4 +216,9 @@ public class Movement : MonoBehaviour
             EndDash();
         }     
     }
+
+    public bool OnGround()
+    {
+        return coll.onGround;
+    }
 }

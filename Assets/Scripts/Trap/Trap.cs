@@ -9,7 +9,7 @@ public class Trap : MonoBehaviour, IInteractable
     public void DetectPlayer(Movement playerMovement)
     {
         //RESTART SCENE
-        if (playerMovement.rb.velocity.y <= 0)
+        if (playerMovement.rb.velocity.y <= 0 || playerMovement.OnGround())
         {
             playerMovement.GetComponent<Player>().Die();
         }
