@@ -18,6 +18,7 @@ public class Teleport : Interactive
 
     public override void DetectPlayer(Movement playerMovement)
     {
+        playerMovement.EndDash();
         playerMovement.hasDashed = false;
         playerMovement.gameObject.transform.position = exit.transform.position;
         AudioManager.instance.Play("Teleport");
